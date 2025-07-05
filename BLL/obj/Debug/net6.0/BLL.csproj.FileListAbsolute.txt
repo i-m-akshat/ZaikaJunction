@@ -32,3 +32,21 @@ D:\AllGitRepositories_LOCAL\OnilneFoodApplication\BLL\obj\Debug\net6.0\refint\BL
 D:\AllGitRepositories_LOCAL\OnilneFoodApplication\BLL\obj\Debug\net6.0\BLL.pdb
 D:\AllGitRepositories_LOCAL\OnilneFoodApplication\BLL\obj\Debug\net6.0\ref\BLL.dll
 D:\Online Fast Food Delivery project\BLL\obj\Debug\net6.0\BLL.csproj.Up2Date
+A:\OnlineFoodApplication\Online_Food_Application\BLL\bin\Debug\net6.0\BLL.deps.json
+A:\OnlineFoodApplication\Online_Food_Application\BLL\bin\Debug\net6.0\BLL.dll
+A:\OnlineFoodApplication\Online_Food_Application\BLL\bin\Debug\net6.0\BLL.pdb
+A:\OnlineFoodApplication\Online_Food_Application\BLL\bin\Debug\net6.0\DAL.dll
+A:\OnlineFoodApplication\Online_Food_Application\BLL\bin\Debug\net6.0\Models.dll
+A:\OnlineFoodApplication\Online_Food_Application\BLL\bin\Debug\net6.0\DAL.pdb
+A:\OnlineFoodApplication\Online_Food_Application\BLL\bin\Debug\net6.0\Models.pdb
+A:\OnlineFoodApplication\Online_Food_Application\BLL\obj\Debug\net6.0\BLL.csproj.AssemblyReference.cache
+A:\OnlineFoodApplication\Online_Food_Application\BLL\obj\Debug\net6.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+A:\OnlineFoodApplication\Online_Food_Application\BLL\obj\Debug\net6.0\BLL.AssemblyInfoInputs.cache
+A:\OnlineFoodApplication\Online_Food_Application\BLL\obj\Debug\net6.0\BLL.AssemblyInfo.cs
+A:\OnlineFoodApplication\Online_Food_Application\BLL\obj\Debug\net6.0\BLL.csproj.CoreCompileInputs.cache
+A:\OnlineFoodApplication\Online_Food_Application\BLL\obj\Debug\net6.0\BLL.sourcelink.json
+A:\OnlineFoodApplication\Online_Food_Application\BLL\obj\Debug\net6.0\BLL.csproj.Up2Date
+A:\OnlineFoodApplication\Online_Food_Application\BLL\obj\Debug\net6.0\BLL.dll
+A:\OnlineFoodApplication\Online_Food_Application\BLL\obj\Debug\net6.0\refint\BLL.dll
+A:\OnlineFoodApplication\Online_Food_Application\BLL\obj\Debug\net6.0\BLL.pdb
+A:\OnlineFoodApplication\Online_Food_Application\BLL\obj\Debug\net6.0\ref\BLL.dll
