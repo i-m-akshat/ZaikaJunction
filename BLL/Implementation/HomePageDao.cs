@@ -138,7 +138,34 @@ namespace BLL.Implementation
                     IconImage = x.IconImage,
                     ShowOnHomePage = x.ShowOnHomePage
                 }
-                    ).Take(3).OrderBy(x=>x.FoodId).ToList();
+                    ).Take(4).OrderBy(x=>x.FoodId).ToList();
+                return list;
+            }
+        }
+
+        public async Task<List<Food>> GetFoodsForHomepage_TopRated()
+        {
+            await using (var _context = new Online_Food_ApplicationContext())
+            {
+                List<Food> list = _context.TblFoods.Where(x => x.IsActive == true && x.Quantity > 0).Select(x => new Food
+                {
+                    FoodId = x.FoodId,
+                    FoodName = x.FoodName,
+                    FoodDesc = x.FoodDesc,
+                    FoodAmount = x.FoodAmount,
+                    Quantity = (int)(x.Quantity),
+                    FoodTypeId = x.FoodTypeId,
+                    FoodTypeName = x.FoodType.FoodType,
+                    SubCatId = x.SubCatId,
+                    SubCategoryName = x.SubCat.SubCatName,
+                    CatId = x.CatId,
+                    CategoryName = x.Cat.CatName,
+                    IsActive = x.IsActive,
+                    BannerImage = x.BannerImage,
+                    IconImage = x.IconImage,
+                    ShowOnHomePage = x.ShowOnHomePage
+                }
+                    ).Take(6).OrderBy(x => x.FoodId).ToList();
                 return list;
             }
         }

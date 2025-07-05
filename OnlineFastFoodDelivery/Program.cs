@@ -18,8 +18,6 @@ builder.Services.AddScoped<SendMailDAO, SendMailDao>();
 builder.Services.AddScoped<OrderStatusDAO,OrderStatusDao>();
 builder.Services.AddScoped<CartDAO, CartDao>();
 builder.Services.AddScoped<CheckoutDAO, CheckoutDao>();
-builder.Services.AddScoped<IBotAPIService, BotAPIService>();
-builder.Services.AddScoped<IADProductService, ADProductService>();
 //DBCONtext
 var provider = builder.Services.BuildServiceProvider();
 var config=provider.GetRequiredService<IConfiguration>();

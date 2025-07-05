@@ -19,6 +19,7 @@ namespace BLL.Interfaces
         Task<HomePageViewModel> GetFoodTypeForHomePage(int _subCatID);
         Task<List<Food>> GetAllFoods();
         Task<List<Food>> GetFoodsForHomepage();
+        Task<List<Food>> GetFoodsForHomepage_TopRated();
         Task<List<Food>> GetTopRatingFood();
         Task<List<Category>> GetAllCategories();
         Task<List<FoodType>> GetAllFoodTypes();

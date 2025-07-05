@@ -3,10 +3,8 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div>   
 
-    <!--Banner-->
-    <div class="bannerDiv" id="Banner">
+@* <div class="bannerDiv" id="Banner">
         <div class="mask">
             <div>
                 <span class="bannerImgText">
@@ -27,208 +25,290 @@
 
             </div>
         </div>
+    </div> *@
+<section id="home" class="text-center hero-section d-flex align-items-center justify-content-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <img src="img/ZaikaJunctionEnlarge.png" alt="Zaika Junction Logo" class="mb-3 hero-logo">
+
+                <p class="hero-subtitle">THE BEST FOOD RESTAURANT IN AYODHYA</p>
+
+                <div class="mt-4 search-bar-container position-relative" id="_searchFood">
+                    <input type="text" class="form-control" id="tags" placeholder="SEARCH FOR THE FOOD">
+                    <button class="btn-search"><i class="fas fa-search" onclick="goToFoodDetails()"></i></button>
+                </div>
+            </div>
+        </div>
     </div>
-    <!--Why Choose Us-->
-    <div class="DescriptionContainer col-12 my-3">
-        <div class="row my-3 mx-2 ">
-            <h3 class="row-header" style="font-family: 'Permanent Marker', cursive;">Why Choose Us?</h3>
-            <p class="text-center text-white" style="font-size:15px">You should Choose us because </p>
-            <div class="col-12 my-2">
-                <div class="row g-0 justify-content-center align-items-center">
-                    <div class=" col-md-3 my-1 mx-2 d-flex align-items-stretch" style="background:none">
-                        <div class=" col-12 d-flex flex-column">
-                            <center><img src="~/Images/kindpng_3260136.png" class="d-flex" style="border-radius:50%;height:200px;widht:250px" /></center>
-                            <div class="col-12 mb-0 mt-auto">
-                            <h5 class="row-header mt-1" style="font-size:20px">Fast Delivery</h5>
-                            <p class="text-center text-white" style="text-align:justify">
-                                Indulge in the joy of instant gratification with AxA Foods. Our commitment to quick and efficient service ensures that your favorite dishes are just moments away from your doorstep.
-                            </p>
+</section>
+
+<!-- Why Choose Us Section -->
+<section id="why-choose-us" class="container section-padding">
+    <h2 class="section-title">WHY CHOOSE US?</h2>
+    <div class="text-center row g-4">
+        <div class="col-md-4">
+            <div class="why-choose-item">
+                <img src="img/PremiumQuality.png" alt="Quality Food">
+                <h5>Premium Quality</h5>
+                <p>We use only the freshest and finest ingredients for every dish.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="why-choose-item">
+                <img src="img/FastDelivery.png" alt="Fast Delivery">
+                <h5>Fast Delivery</h5>
+                <p>Get your favorite meals delivered hot and fresh, right to your door.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="why-choose-item">
+                <img src="img/DiverseMenu.png" alt="Variety of Food">
+                <h5>Diverse Menu</h5>
+                <p>Explore a wide range of cuisines to satisfy every craving.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Categories Section -->
+<section id="categories" class="container section-padding">
+    <h2 class="mb-5 text-center section-title">CATEGORIES</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        @{
+            foreach (var category in Model.TopCategories)
+            {
+
+                <a target="_blank" role="button" asp-asp-controller="Home" asp-action="Foods" asp-route-CatID="@category.CatId" class="col" style="text-decoration:none">
+                    <div class="category-card h-100">
+                        <img src="data:image/png;base64,@Convert.ToBase64String(category.IconImage)" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">@category.CatName</h5>
+                            <p class="card-text text-muted"> @category.CatDesc</p>
+                        </div>
+                    </div>
+                </a>
+            }}
+    </div>
+</section>
+
+<!-- Signature Dishes Section -->
+<section id="signature-dishes" class="container section-padding">
+    <h2 class="mb-5 text-center section-title">OUR SIGNATURE DISHES</h2>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        @{
+            foreach(var food in Model.Food){
+                <a  target="_blank" asp-action="FoodDetails" asp-asp-controller="Home" asp-route-FoodID="@food.FoodId" class="col" style="text-decoration:none">
+                    <div class="signature-dish-card h-100">
+                        <img src="data:image/png;base64,@Convert.ToBase64String(food.IconImage)" class="img-fluid">
+                        <div class="card-body">
+                            <div class="mb-2 d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0 card-title">@food.FoodName</h5>
+                                @*<span class="badge badge-nonveg">Non-Vegetarian</span>*@
                             </div>
-                       </div>
-                   </div>
-                    <div class=" col-md-3 my-1 mx-2 d-flex align-items-stretch" style="background:none">
-                        <div class=" col-12 d-flex flex-column">
-                            <center><img src="~/Images/kindpng_1519867.png" class="d-flex" style="border-radius:50%;height:200px;widht:250px" /></center>
-                            <div class="col-12 mb-0 mt-auto">
-                                <h5 class="row-header mt-1" style="font-size:20px">Best Foods</h5>
-                                <p class="text-center text-white " style="text-align:justify">
-                                    At Flavours Of Ayodhya, we take pride in delivering an unrivaled culinary experience by consistently providing the best food. Our commitment to excellence starts with sourcing premium ingredients to craft each dish with care and precision.
-                                </p>
+                            <p class="card-text"> @food.FoodDesc</p>
+                            @*<p class="food-price text-end">$18.99</p>*@
+                        </div>
+                    </div>
+                </a>
+            }
+        }
+
+
+    </div>
+</section>
+
+<!-- Sub-Categories / More Menu Items Section (re-using card style for individual items) -->
+<section id="our-menu-items" class="container section-padding our-food-section">
+    <h2 class="mb-5 text-center section-title">OUR FOOD ITEMS</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        @{
+            foreach (var Subcat in Model.SubCategories)
+            {
+                <div class="col">
+                    <div class="shadow-sm food-item-card h-100 d-flex flex-column">
+                        <img src="data:image/png;base64,@Convert.ToBase64String(Subcat.IconImg)" class="card-img-top" alt="Classic Burger">
+                        <div class="card-body d-flex flex-column">
+                            <div class="mb-2 d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0 card-title">@Subcat.SubCatName</h5>
                             </div>
-                           
-                       </div>
-                   </div>
-                    <div class=" col-md-3 my-1 mx-2 d-flex align-items-stretch" style="background:none">
-                        <div class=" col-12 d-flex flex-column">
-                            <center><img src="~/Images/kindpng_2679606.png" class="d-flex" style="border-radius:50%;height:200px;widht:250px" /></center>
-                            <div class="col-12 mb-0 mt-auto">
-                            <h5 class="row-header mt-1" style="font-size:20px">Party Foods</h5>
-                            <p class="text-center text-white " style="text-align:justify">
-                                Elevate your celebrations with us – your premier destination for the best party foods. From delectable appetizers to crowd-pleasing mains and irresistible desserts, our curated party menu is designed to turn every occasion into a culinary extravaganza.
-                            </p>
+                            <p class="card-text">@Subcat.SubCatDescription</p>
+                            <div class="mt-auto d-flex justify-content-center">
+                                <a target="_blank" role="button" asp-controller="Home" asp-action="Foods" asp-route-SubCatID="@Subcat.SubCatid" class="btn btn-cart">
+                                    Add to Cart
+                                </a>
                             </div>
                         </div>
                     </div>
-               </div>
-            </div>
-            
-        </div>
-        </div>
-    <!--Category Row-->
-    <div class="col-12 mt-3 " style="margin-top:30px" id="CardRow">
-        <div class="row my-2 mx-2 justify-content-center align-content-center">
-            <h3 class="row-header" style="font-family: 'Permanent Marker', cursive;">
-                Categories
-            </h3>
-            <p class="text-center text-white" style="font-size:15px">Categories Provided By Us</p>
-            @{
-                foreach(var category in Model.TopCategories)
-                {
-
-                                                <div class="TopFoodContainer">
-                                                    @* <div class="card-body">*@
-                                                    <a target="_blank" role="button" asp-asp-controller="Home" asp-action="Foods" asp-route-CatID="@category.CatId">
-                                                        <img src="data:image/png;base64,@Convert.ToBase64String(category.IconImage)" class="img-fluid TopFoodImg" />
-
-                                                        <div class="txtArea">
-                                                            <div class="TopFoodtxt">
-                                                                <h3 class="text-center" style="font-family: 'Permanent Marker', cursive;">
-                                                                    @category.CatName</h3>
-                                                        <p>
-                                                           @category.CatDesc
-                                                        </p>
-                                                    </div>
-                                                    </div>
-                                                    </a>
-                                                </div>
-                  }
-                
+                </div>
             }
-        </div>
+        }
     </div>
-    <!--Explore Our Menu-->
-    <div class="col-12 mt-2">
-        <div class="row my-2 mx-2 justify-content-center align-content-center">
-            <h3 class="row-header" style="font-family: 'Permanent Marker', cursive;">
-                Our Menu
-            </h3>
-            <p class="text-center text-white" style="font-size:15px">Our Menu For Best Experience</p>
-        <div class="row justify-content-center align-items-center my-2 py-2">
-            <div class="card col-md-3" style="background:none">
-                    <img src="~/images/samosa-resized.jpg" class="img-fluid" style="object-fit:cover" />
-            </div>
-                <div class="card col-md-4 text-white" style="background:none">
-                    <p class="text-center">Taste Perception</p>
-                        <h2 class="text-center">Traditional & Mordern</h2>
-                        <p class="text-center">Check out Our Latest Menu</p>
-                    <a class="btn btn-sm btn-outline-light btn-block my-3" href="~/images/menu.png" target="_blank">Explore Our Menu</a>
-                   
-            </div>
-                <div class="card col-md-3" style="background:none">
-                    <img src="~/images/handpan.jpg" class="img-fluid" style="object-fit:cover" />
-            </div>
-        </div>
-    </div>
-    <!--SubCategory Row-->
-    <div class="col-12 mt-3 " style="margin-top:30px" id="CardRow">
-        <div class="row my-2 mx-2 justify-content-center align-content-center">
-            <h3 class="row-header" style="font-family: 'Permanent Marker', cursive;">
-                Sub-Categories
-            </h3>
-            <p class="text-center text-white" style="font-size:15px">Sub Categories Provided By Us</p>
-            <div class="row justify-content-center align-items-center">
-                
-                    @foreach (var Subcat in Model.SubCategories)
-                    {
-                    <div class="TopFoodContainer">
-                        @* <div class="card-body">*@
-                        <a target="_blank" role="button" asp-asp-controller="Home" asp-action="Foods" asp-route-SubCatID="@Subcat.SubCatid">
-                            <img src="data:image/png;base64,@Convert.ToBase64String(Subcat.IconImg)" class="img-fluid TopFoodImg" />
-
-                            <div class="txtArea">
-                                <div class="TopFoodtxt">
-                                    <h3 class="text-center" style="font-family: 'Permanent Marker', cursive;">
-                                        @Subcat.SubCatName
-                                    </h3>
-                                    <p>
-                                        @Subcat.SubCatDescription
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                 
-                    }
-               
-                
-            </div>
-           
-          
-            
-        </div>
-    </div>
-    <!--FoodTypeRow-->
-   
-    <!--Description-->
-    <div class="DescriptionContainer col-12 my-3 d-flex flex-column">
-        <div class="row my-3 mx-2  d-flex align-items-stretch">
-            <h3 class="row-header" style="font-family: 'Permanent Marker', cursive;">Our Food</h3>
-            <div class="col-md-6">
-                <img src="~/indian-cuisine-spice-stock-photography-chili-pepper-seasoning-spices-for-recipe-png-b87eb3bbe793d730e4737f04b6fd5b9d.png" class="card-img-top d-flex" style="width:100%" />
-            </div>
-            <div class="col-md-6 col-md-6 d-flex align-items-center">
-                <p class="text-center text-white" style="text-align:justify;top:50%;">
-                    "Welcome to AxA Foods, where culinary excellence meets your cravings. Our diverse menu boasts a global fusion of flavors, from timeless classics to innovative creations.
-                    At AxA Foods, we take pride in using quality ingredients and skilled chefs to deliver a gastronomic journey like no other.
-                    Explore our website to savor a diverse range of dishes that blend tradition with innovation. 
-                    Choose AxA Foods for a dining experience that transcends boundaries, offering something delicious for every palate."<br/>
-                    <span class="mt-2">- Akshat Dwivedi</span>
+</section>
+<!-- Our Food Section (Text & Ingredients/Dishes Row) -->
+<section id="our-food" class="container section-padding our-food-section">
+    <div class="row align-items-center g-5">
+        <!-- Text Content -->
+        <div class="col-lg-6">
+            <div class="text-content pe-lg-4">
+                <h2 class="mb-5 text-center section-title">OUR FOOD ITEMS</h2>
+                <p class="mb-3 lead">
+                    At <strong>Zaika Junction</strong>, we pride ourselves on crafting culinary masterpieces using only the freshest, locally sourced ingredients. Our chefs are dedicated to creating dishes that not only tantalize your taste buds but also tell a story of authentic flavors and traditional techniques, refined for the modern palate.
                 </p>
-
+                <p class="mb-0">
+                    From the vibrant spices of our curries to the comforting warmth of our freshly baked bread, every item on our menu is a testament to our commitment to quality and passion for food. We believe that good food starts with good ingredients — meticulously selected to ensure an unforgettable dining experience.
+                </p>
             </div>
+        </div>
 
-
+        <!-- Ingredient Images -->
+        <div class="col-lg-6">
+            <div class="row row-cols-2 g-3 ingredients-row">
+                <div class="col">
+                    <div class="ingredient-img-wrapper">
+                        <img src="img/FreshSpices.jpeg" alt="Fresh Spices" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="ingredient-img-wrapper">
+                        <img src="img/OrganicVeggies.jpeg" alt="Organic Vegetables" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="ingredient-img-wrapper">
+                        <img src="/img/HandMadePsta.jpg" alt="Handmade Pasta" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="ingredient-img-wrapper">
+                        <img src="img/LocalProduce.jpeg" alt="Local Produce" class="img-fluid">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <!--Top Food Row-->
-    <div class="col-12 my-2 py-2 " id="CardRow">
-        <div class="row my-2 mx-2 justify-content-center align-content-center">
-            <h3 class="row-header" style="font-family: 'Permanent Marker', cursive;">
-                Our Top Rated Dish
-            </h3>
-            <p class="text-center text-white" style="font-size:15px">Top Dishes of Ours</p>
+</section>
+<!-- Our Top Rated Dish Section -->
+<section id="top-rated" class="container section-padding">
+    <h2 class="mb-5 text-center section-title">OUR TOP RATED DISH</h2>
+    <div id="topRatedCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            @{
+                int itemsPerSlide = 3;
+                int totalItems = Model.TopFoods.Count;
+                int totalSlides = (int)Math.Ceiling((double)totalItems / itemsPerSlide);
+            }
 
-            <div class="row justify-content-center align-content-center">
-                @foreach(var food in Model.Food)
-                {
-                    <div class="TopFoodContainer">
-                        @* <div class="card-body">*@
-                        <a  target="_blank" asp-action="FoodDetails" asp-asp-controller="Home" asp-route-FoodID="@food.FoodId">
-                            <img src="data:image/png;base64,@Convert.ToBase64String(food.IconImage)" class="img-fluid TopFoodImg" />
-                            <div class="txtArea">
-                                <div class="TopFoodtxt">
-                                                <h3 class="text-center" style="font-family: 'Permanent Marker', cursive;">@food.FoodName</h3>
-                                    <p>
-                                        @food.FoodDesc
-                                    </p>
+            @for (int i = 0; i < totalSlides; i++)
+            {
+                var currFoods = Model.TopFoods.Skip(i * itemsPerSlide).Take(itemsPerSlide).ToList();
+                <div class="carousel-item @(i == 0 ? "active" : "")">
+                    <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+                        @foreach (var food in currFoods)
+                        {
+                            <div class="col d-flex">
+                                <div class="top-rated-item flex-fill d-flex flex-column">
+                                    <img src="data:image/png;base64,@Convert.ToBase64String(food.IconImage)" class="img-fluid" alt="@food.FoodName" />
+                                    <h5>@food.FoodName</h5>
+                                    <p>@food.FoodDesc</p>
+
+                                    @* Optional rating block if needed *@
+                                    @* <div class="mt-auto rating">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star-half-alt text-warning"></i>
+                            <span class="ms-2 text-muted">(4.5/5)</span>
+                        </div> *@
                                 </div>
                             </div>
-                        </a>
-                       
+                        }
                     </div>
-                }
-               
-            </div>
+                </div>
+            }
 
         </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#topRatedCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#topRatedCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#topRatedCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#topRatedCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
     </div>
-</div>
+</section>
+<!-- About Us Section -->
+<section id="about" class="container about-section section-padding">
+    <h2 class="text-center section-title">
+        About <span class="text-accent">Zaika Junction</span>
+    </h2>
+
+    <div class="row justify-content-center">
+        <div class="text-center col-lg-9">
+            <p class="mb-4 lead">
+                At <strong>Zaika Junction</strong>, we believe that great food brings people together.
+                Our passion is crafting fresh, flavorful meals using only the finest ingredients—
+                delivered with care to your home or office.
+            </p>
+            <p class="mb-3">
+                Since our founding in <strong>2023</strong>, our mission has been to offer a convenient
+                yet gourmet dining experience. Our chefs create a diverse menu—from comforting
+                classics to bold, modern flavors—ensuring there's something for everyone.
+            </p>
+            <p class="mb-0">
+                We're dedicated to <strong>quality</strong>, <strong>freshness</strong>, and
+                <strong>exceptional service</strong>. Join the Zaika Junction family and discover the
+                joy of truly great food—made easy.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="container contact-section section-padding">
+    <h2 class="section-title">Get in Touch</h2>
+    <div class="row">
+        <div class="mx-auto col-lg-6">
+            <p class="mb-4 text-center lead">Have questions, feedback, or special requests? We'd love to hear from you!</p>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input type="text" class="form-control rounded-pill" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control rounded-pill" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control rounded-3" id="message" rows="5" required></textarea>
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg rounded-pill">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
 
 <script>
     function goToFoodDetails(){
         var FoodName = $('#tags').val();
         
-        console.log(FoodName);
+        // console.log(FoodName);
         $.ajax({
             url: "Home/getFoodIDbyName?FoodName=" + FoodName,
             method:"GET",
@@ -248,7 +328,7 @@
         type: 'GET',
         success: function (result) {
             availableTags = result;
-            console.log(availableTags);
+            // console.log(availableTags);
         }
     })
     $(function () {

@@ -30,11 +30,13 @@ namespace OnlineFastFoodDelivery.Controllers
             List<Category> topcategories = new List<Category>();
             List<SubCategory> subCategories = new List<SubCategory>();
             List<Food> foods = new List<Food>();
+            List<Food> topFoods = new List<Food>();
             List<FoodType> foodTypes = new List<FoodType>();
             categories = await DAL.GetAllCategories();
             topcategories = await DAL.GetCategoriesForHomepage();
             foodTypes = await DAL.GetAllFoodTypesForHomepage();
             subCategories = await DAL.GetSubCategoriesForHomePage();
+            topFoods = await DAL.GetFoodsForHomepage_TopRated();
             foods = await DAL.GetFoodsForHomepage();
             var _viewModel = new HomePageViewModel()
             {
@@ -42,7 +44,8 @@ namespace OnlineFastFoodDelivery.Controllers
                 TopCategories = topcategories,
                 SubCategories = subCategories,
                 Food = foods,
-                FoodTypes = foodTypes
+                FoodTypes = foodTypes,
+                TopFoods = topFoods
             };
 
 

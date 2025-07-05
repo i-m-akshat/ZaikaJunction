@@ -15,5 +15,6 @@ namespace Models.ViewModel
         public List<Food> Food { get; set; }
         public List<ProductImage> ProductImages { get; set; }
         public List<Rating> Ratings { get; set; }
+        public List<Food> TopFoods { get; set; }
     }
 }

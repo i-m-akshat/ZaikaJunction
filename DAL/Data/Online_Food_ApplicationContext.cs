@@ -37,7 +37,7 @@ namespace OnlineFastFoodDelivery
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 optionsBuilder.UseSqlServer(
-                    "Server=DESKTOP-RBREH2D\\SQLEXPRESS;Database=Online_Food_Application;Trusted_Connection=True;ConnectRetryCount=0", sqlServerOptionsAction: sqlOptions =>
+                   "Server=DESKTOP-RBREH2D\\SQLEXPRESS;Database=Online_Food_Application;Trusted_Connection=True;Encrypt=True;TrustServerCertificate=True", sqlServerOptionsAction: sqlOptions =>
                 {
                     sqlOptions.EnableRetryOnFailure();
                 });
