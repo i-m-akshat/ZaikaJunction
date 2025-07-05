@@ -17,17 +17,25 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link href="~/fontawesome-free-6.1.2-web/css/all.min.css" rel="stylesheet" />
+    <link href="~/lib/fontawesome/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
     <link href="~/css/jquery-ui.min.css" rel="stylesheet" />
+    <!-- Scripts -->
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/js/sweetalert.min.js"></script>
+    <script src="~/js/jquery-ui.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
 </head>
 <body id="UserBody">
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="img/Logo.png" alt="Logo" class="navbar-logo" />
+                <img src="~/img/Logo.png" alt="Logo" class="navbar-logo" />
             </a>
 
             <!-- Toggler -->
@@ -65,21 +73,14 @@
     <footer class="py-4 footer">
         <div class="container text-center">
             <div class="mb-3">
-                <img src="img/" alt="Zaika Junction Logo" class="footer-logo" />
+                <img src="~/img/ZaikaJunctionWhiteEnlargeTrans.png" alt="Zaika Junction Logo" class="footer-logo" />
             </div>
             <p class="mb-1">&copy; 2025 Zaika Junction. All rights reserved.</p>
             <p>Designed with ❤️ by Akshat Dwivedi</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="~/lib/jquery/dist/jquery.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
-    <script src="~/js/sweetalert.min.js"></script>
-    <script src="~/js/jquery-ui.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+   
 
     @if (TempData["Success"] != null)
     {

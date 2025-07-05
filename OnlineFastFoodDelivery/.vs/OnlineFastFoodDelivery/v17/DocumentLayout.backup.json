@@ -3,16 +3,44 @@
   "WorkspaceRootPath": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\views\\home\\userprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:views\\home\\userprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\views\\user\\usersignup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:views\\user\\usersignup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\views\\user\\userlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:views\\user\\userlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\wwwroot\\css\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:wwwroot\\css\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\views\\shared\\_food.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:views\\shared\\_food.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{48B2607E-064E-4F7F-AAEE-4422626779BE}|..\\BLL\\BLL.csproj|a:\\onlinefoodapplication\\online_food_application\\bll\\interfaces\\homepagedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -23,10 +51,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6CC9E955-3FE4-4FE1-BD84-55D80971BD51}|..\\DAL\\DAL.csproj|a:\\onlinefoodapplication\\online_food_application\\dal\\data\\online_food_applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -61,10 +85,6 @@
       "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:views\\food\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\views\\user\\userlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:views\\user\\userlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\controllers\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:controllers\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -83,10 +103,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -112,16 +128,8 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\myReactPortfolio\\react-portfolio\\src\\components\\Intro\\Intro.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\views\\shared\\_food.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:views\\shared\\_food.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\views\\home\\foods.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:views\\home\\foods.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\views\\shared\\components\\food\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:views\\shared\\components\\food\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -130,10 +138,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\views\\admin\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:views\\admin\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -145,10 +149,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\views\\home\\userprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:views\\home\\userprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\views\\home\\fooddetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -181,10 +181,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\views\\checkout\\orderconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:views\\checkout\\orderconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\views\\user\\usersignup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|solutionrelative:views\\user\\usersignup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8706C898-5847-4FC0-8723-EE208B60CCDE}|OnlineFastFoodDelivery.csproj|a:\\onlinefoodapplication\\online_food_application\\onlinefastfooddelivery\\onlinefastfooddelivery.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -358,6 +354,10 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Online Fast Food Delivery project\\Models\\Email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Shared\\Components\\Food\\Default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Shared\\Components\\Food\\Default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -367,7 +367,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -379,392 +379,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Add_Edit.cshtml",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Moderator\\Add_Edit.cshtml",
-              "RelativeDocumentMoniker": "Views\\Moderator\\Add_Edit.cshtml",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Moderator\\Add_Edit.cshtml",
-              "RelativeToolTip": "Views\\Moderator\\Add_Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2023-12-22T18:46:35.608Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "HomeController.cs",
               "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAlwCUAAABEAAAAAAAAAA==",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAnwHsAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2023-12-23T17:18:39.414Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HomePageDao.cs",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\BLL\\Implementation\\HomePageDao.cs",
-              "RelativeDocumentMoniker": "..\\BLL\\Implementation\\HomePageDao.cs",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\BLL\\Implementation\\HomePageDao.cs",
-              "RelativeToolTip": "..\\BLL\\Implementation\\HomePageDao.cs",
-              "ViewState": "AgIAAP0AAAAAAAAAAAAlwAgBAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T03:54:07.476Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HomePageDAO.cs",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\BLL\\Interfaces\\HomePageDAO.cs",
-              "RelativeDocumentMoniker": "..\\BLL\\Interfaces\\HomePageDAO.cs",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\BLL\\Interfaces\\HomePageDAO.cs",
-              "RelativeToolTip": "..\\BLL\\Interfaces\\HomePageDAO.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABYAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T04:30:33.68Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAEcAAAAAAAAAAADwv2cAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2023-12-23T17:41:46.293Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-05T01:44:20.015Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "index.css",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\wwwroot\\css\\index.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\index.css",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\wwwroot\\css\\index.css",
-              "RelativeToolTip": "wwwroot\\css\\index.css",
-              "ViewState": "AgIAAGADAAAAAAAAAAAkwGcDAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-07-05T03:36:38.709Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ModeratorController.cs",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\ModeratorController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ModeratorController.cs",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\ModeratorController.cs",
-              "RelativeToolTip": "Controllers\\ModeratorController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-22T22:50:26.331Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "site.css",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAC8AAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-07-05T03:36:58.696Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Online_Food_ApplicationContext.cs",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\DAL\\Data\\Online_Food_ApplicationContext.cs",
-              "RelativeDocumentMoniker": "..\\DAL\\Data\\Online_Food_ApplicationContext.cs",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\DAL\\Data\\Online_Food_ApplicationContext.cs",
-              "RelativeToolTip": "..\\DAL\\Data\\Online_Food_ApplicationContext.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACoAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T02:02:16.424Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "FoodDao.cs",
-              "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\FoodDao.cs",
-              "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\FoodDao.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAvwGUAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-13T12:29:18.191Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAqwBcAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T01:53:34.665Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BLL",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\BLL\\BLL.csproj",
-              "RelativeDocumentMoniker": "..\\BLL\\BLL.csproj",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\BLL\\BLL.csproj",
-              "RelativeToolTip": "..\\BLL\\BLL.csproj",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-07-05T01:50:32.754Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\BLL\\Class1.cs",
-              "RelativeDocumentMoniker": "..\\BLL\\Class1.cs",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\BLL\\Class1.cs",
-              "RelativeToolTip": "..\\BLL\\Class1.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T01:58:31.732Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "AddAdminDao.cs",
-              "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\AddAdminDao.cs",
-              "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\AddAdminDao.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAvwFMAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T10:30:41.518Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "FoodController.cs",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\FoodController.cs",
-              "RelativeDocumentMoniker": "Controllers\\FoodController.cs",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\FoodController.cs",
-              "RelativeToolTip": "Controllers\\FoodController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAABBwCIAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-22T18:39:02.274Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Food\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Food\\Index.cshtml",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Food\\Index.cshtml",
-              "RelativeToolTip": "Views\\Food\\Index.cshtml",
-              "ViewState": "AgIAAHoAAAAAAAAAAAAxwJ0AAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-01-12T08:46:02.953Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
               "Title": "UserLogin.cshtml",
               "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\User\\UserLogin.cshtml",
               "RelativeDocumentMoniker": "Views\\User\\UserLogin.cshtml",
               "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\User\\UserLogin.cshtml",
               "RelativeToolTip": "Views\\User\\UserLogin.cshtml",
-              "ViewState": "AgIAALQAAAAAAAAAAAAqwMkAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAH8AAAAAAAAAAADwv4YAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2023-12-29T15:59:54.374Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "EmailController.cs",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\EmailController.cs",
-              "RelativeDocumentMoniker": "Controllers\\EmailController.cs",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\EmailController.cs",
-              "RelativeToolTip": "Controllers\\EmailController.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAvwBIAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-30T12:55:14.678Z",
+              "DocumentIndex": 4,
+              "Title": "UserSignUp.cshtml",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\User\\UserSignUp.cshtml",
+              "RelativeDocumentMoniker": "Views\\User\\UserSignUp.cshtml",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\User\\UserSignUp.cshtml",
+              "RelativeToolTip": "Views\\User\\UserSignUp.cshtml",
+              "ViewState": "AgIAAHwAAAAAAAAAAADwv5wAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2023-12-30T16:46:20.541Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "NecessaryFunctions.cs",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Utilites\\NecessaryFunctions.cs",
-              "RelativeDocumentMoniker": "Utilites\\NecessaryFunctions.cs",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Utilites\\NecessaryFunctions.cs",
-              "RelativeToolTip": "Utilites\\NecessaryFunctions.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAABBwA4AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T17:39:48.395Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "Online_Food_ApplicationContext.cs",
-              "DocumentMoniker": "D:\\Online Fast Food Delivery project\\DAL\\Data\\Online_Food_ApplicationContext.cs",
-              "ToolTip": "D:\\Online Fast Food Delivery project\\DAL\\Data\\Online_Food_ApplicationContext.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAABBwCgAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-29T18:21:35.906Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "_passSecurity.cs",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Utilites\\_passSecurity.cs",
-              "RelativeDocumentMoniker": "Utilites\\_passSecurity.cs",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Utilites\\_passSecurity.cs",
-              "RelativeToolTip": "Utilites\\_passSecurity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T18:50:47.518Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "SessionAuthorize.cs",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Utilites\\SessionAuthorize.cs",
-              "RelativeDocumentMoniker": "Utilites\\SessionAuthorize.cs",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Utilites\\SessionAuthorize.cs",
-              "RelativeToolTip": "Utilites\\SessionAuthorize.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T17:40:25.949Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "TblRole.cs",
-              "DocumentMoniker": "D:\\Online Fast Food Delivery project\\DAL\\Models\\TblRole.cs",
-              "ToolTip": "D:\\Online Fast Food Delivery project\\DAL\\Models\\TblRole.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T04:48:15.017Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "TblRating.cs",
-              "DocumentMoniker": "D:\\Online Fast Food Delivery project\\DAL\\Models\\TblRating.cs",
-              "ToolTip": "D:\\Online Fast Food Delivery project\\DAL\\Models\\TblRating.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T04:48:17.383Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "TblSubCategory.cs",
-              "DocumentMoniker": "D:\\Online Fast Food Delivery project\\DAL\\Models\\TblSubCategory.cs",
-              "ToolTip": "D:\\Online Fast Food Delivery project\\DAL\\Models\\TblSubCategory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T04:48:14.089Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "CartController.cs",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\CartController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CartController.cs",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\CartController.cs",
-              "RelativeToolTip": "Controllers\\CartController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAABBwF8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-23T17:18:12.44Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
-              "Title": "UserLoginDao.cs",
-              "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\UserLoginDao.cs",
-              "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\UserLoginDao.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAcwBYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-29T16:28:36.961Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 62,
-              "Title": "SendMailDao.cs",
-              "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\SendMailDao.cs",
-              "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\SendMailDao.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAqwBUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-30T10:59:45.352Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 63,
-              "Title": "TblAdmin.cs",
-              "DocumentMoniker": "D:\\Online Fast Food Delivery project\\DAL\\Models\\TblAdmin.cs",
-              "ToolTip": "D:\\Online Fast Food Delivery project\\DAL\\Models\\TblAdmin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T10:31:06.23Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CategoryController.cs",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\CategoryController.cs",
-              "RelativeToolTip": "Controllers\\CategoryController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-22T18:12:20.807Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 9,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
@@ -777,109 +431,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Recipe.cs",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Models\\Recipe.cs",
-              "RelativeDocumentMoniker": "Models\\Recipe.cs",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Models\\Recipe.cs",
-              "RelativeToolTip": "Models\\Recipe.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABUAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T17:39:41.884Z",
+              "WhenOpened": "2023-12-30T14:31:41.771Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\_ViewStart.cshtml",
-              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\_ViewStart.cshtml",
-              "RelativeToolTip": "Views\\_ViewStart.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-05T01:44:20.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserProfile.cshtml",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Home\\UserProfile.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\UserProfile.cshtml",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Home\\UserProfile.cshtml",
+              "RelativeToolTip": "Views\\Home\\UserProfile.cshtml",
+              "ViewState": "AgIAAEMAAAAAAAAAAADgv4UAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-15T16:08:09.116Z",
+              "WhenOpened": "2023-12-22T19:09:36.918Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJgAAABcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-22T19:01:28.195Z",
+              "DocumentIndex": 6,
+              "Title": "index.css",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\wwwroot\\css\\index.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\index.css",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\wwwroot\\css\\index.css",
+              "RelativeToolTip": "wwwroot\\css\\index.css",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAkwKkAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-07-05T03:36:38.709Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "Models\\ErrorViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T17:39:41.002Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Intro.js",
-              "DocumentMoniker": "D:\\myReactPortfolio\\react-portfolio\\src\\components\\Intro\\Intro.js",
-              "ToolTip": "D:\\myReactPortfolio\\react-portfolio\\src\\components\\Intro\\Intro.js",
-              "ViewState": "AgIAABMAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-05-18T17:04:21.414Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Foods.cshtml",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Home\\Foods.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Foods.cshtml",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Home\\Foods.cshtml",
-              "RelativeToolTip": "Views\\Home\\Foods.cshtml",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAxwF8AAAAOAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2023-12-30T19:07:33.659Z",
+              "WhenOpened": "2025-07-05T06:03:23.245Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "_AdminLayout.cshtml",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_AdminLayout.cshtml",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_AdminLayout.cshtml",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAawJQAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2023-12-22T19:02:19.715Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "AdminDashboard.cshtml",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Admin\\AdminDashboard.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\AdminDashboard.cshtml",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Admin\\AdminDashboard.cshtml",
-              "RelativeToolTip": "Views\\Admin\\AdminDashboard.cshtml",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBMAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2023-12-22T18:46:50.389Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 8,
               "Title": "_Food.cshtml",
               "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Shared\\_Food.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Food.cshtml",
@@ -892,66 +509,460 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Shared\\Components\\Food\\Default.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\Components\\Food\\Default.cshtml",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Shared\\Components\\Food\\Default.cshtml",
-              "RelativeToolTip": "Views\\Shared\\Components\\Food\\Default.cshtml",
+              "DocumentIndex": 10,
+              "Title": "HomePageDAO.cs",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\BLL\\Interfaces\\HomePageDAO.cs",
+              "RelativeDocumentMoniker": "..\\BLL\\Interfaces\\HomePageDAO.cs",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\BLL\\Interfaces\\HomePageDAO.cs",
+              "RelativeToolTip": "..\\BLL\\Interfaces\\HomePageDAO.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T04:30:33.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HomePageDao.cs",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\BLL\\Implementation\\HomePageDao.cs",
+              "RelativeDocumentMoniker": "..\\BLL\\Implementation\\HomePageDao.cs",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\BLL\\Implementation\\HomePageDao.cs",
+              "RelativeToolTip": "..\\BLL\\Implementation\\HomePageDao.cs",
+              "ViewState": "AgIAAP0AAAAAAAAAAAAlwAgBAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T03:54:07.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Add_Edit.cshtml",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Moderator\\Add_Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Moderator\\Add_Edit.cshtml",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Moderator\\Add_Edit.cshtml",
+              "RelativeToolTip": "Views\\Moderator\\Add_Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2023-12-22T18:46:35.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ModeratorController.cs",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\ModeratorController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ModeratorController.cs",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\ModeratorController.cs",
+              "RelativeToolTip": "Controllers\\ModeratorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-22T22:50:26.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "site.css",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAC8AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-07-05T03:36:58.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Online_Food_ApplicationContext.cs",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\DAL\\Data\\Online_Food_ApplicationContext.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Data\\Online_Food_ApplicationContext.cs",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\DAL\\Data\\Online_Food_ApplicationContext.cs",
+              "RelativeToolTip": "..\\DAL\\Data\\Online_Food_ApplicationContext.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T02:02:16.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FoodDao.cs",
+              "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\FoodDao.cs",
+              "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\FoodDao.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAvwGUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-13T12:29:18.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Program.cs",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAqwBcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T01:53:34.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BLL.csproj",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\BLL\\BLL.csproj",
+              "RelativeDocumentMoniker": "..\\BLL\\BLL.csproj",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\BLL\\BLL.csproj",
+              "RelativeToolTip": "..\\BLL\\BLL.csproj",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-05T01:50:32.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\BLL\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\BLL\\Class1.cs",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\BLL\\Class1.cs",
+              "RelativeToolTip": "..\\BLL\\Class1.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T01:58:31.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "AddAdminDao.cs",
+              "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\AddAdminDao.cs",
+              "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\AddAdminDao.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAvwFMAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T10:30:41.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "FoodController.cs",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\FoodController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FoodController.cs",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\FoodController.cs",
+              "RelativeToolTip": "Controllers\\FoodController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAABBwCIAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-22T18:39:02.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Food\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Food\\Index.cshtml",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Food\\Index.cshtml",
+              "RelativeToolTip": "Views\\Food\\Index.cshtml",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAxwJ0AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-01-12T08:46:02.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "EmailController.cs",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\EmailController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmailController.cs",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\EmailController.cs",
+              "RelativeToolTip": "Controllers\\EmailController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAvwBIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-30T12:55:14.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "NecessaryFunctions.cs",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Utilites\\NecessaryFunctions.cs",
+              "RelativeDocumentMoniker": "Utilites\\NecessaryFunctions.cs",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Utilites\\NecessaryFunctions.cs",
+              "RelativeToolTip": "Utilites\\NecessaryFunctions.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAABBwA4AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T17:39:48.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "Online_Food_ApplicationContext.cs",
+              "DocumentMoniker": "D:\\Online Fast Food Delivery project\\DAL\\Data\\Online_Food_ApplicationContext.cs",
+              "ToolTip": "D:\\Online Fast Food Delivery project\\DAL\\Data\\Online_Food_ApplicationContext.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAABBwCgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-29T18:21:35.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "_passSecurity.cs",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Utilites\\_passSecurity.cs",
+              "RelativeDocumentMoniker": "Utilites\\_passSecurity.cs",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Utilites\\_passSecurity.cs",
+              "RelativeToolTip": "Utilites\\_passSecurity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T18:50:47.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "SessionAuthorize.cs",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Utilites\\SessionAuthorize.cs",
+              "RelativeDocumentMoniker": "Utilites\\SessionAuthorize.cs",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Utilites\\SessionAuthorize.cs",
+              "RelativeToolTip": "Utilites\\SessionAuthorize.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T17:40:25.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "TblRole.cs",
+              "DocumentMoniker": "D:\\Online Fast Food Delivery project\\DAL\\Models\\TblRole.cs",
+              "ToolTip": "D:\\Online Fast Food Delivery project\\DAL\\Models\\TblRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T04:48:15.017Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "TblRating.cs",
+              "DocumentMoniker": "D:\\Online Fast Food Delivery project\\DAL\\Models\\TblRating.cs",
+              "ToolTip": "D:\\Online Fast Food Delivery project\\DAL\\Models\\TblRating.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T04:48:17.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "TblSubCategory.cs",
+              "DocumentMoniker": "D:\\Online Fast Food Delivery project\\DAL\\Models\\TblSubCategory.cs",
+              "ToolTip": "D:\\Online Fast Food Delivery project\\DAL\\Models\\TblSubCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T04:48:14.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CartController.cs",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\CartController.cs",
+              "RelativeToolTip": "Controllers\\CartController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAABBwF8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-23T17:18:12.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "UserLoginDao.cs",
+              "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\UserLoginDao.cs",
+              "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\UserLoginDao.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAcwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-29T16:28:36.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "SendMailDao.cs",
+              "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\SendMailDao.cs",
+              "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\SendMailDao.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAqwBUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-30T10:59:45.352Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "TblAdmin.cs",
+              "DocumentMoniker": "D:\\Online Fast Food Delivery project\\DAL\\Models\\TblAdmin.cs",
+              "ToolTip": "D:\\Online Fast Food Delivery project\\DAL\\Models\\TblAdmin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T10:31:06.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CategoryController.cs",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "Controllers\\CategoryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-22T18:12:20.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Recipe.cs",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Models\\Recipe.cs",
+              "RelativeDocumentMoniker": "Models\\Recipe.cs",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Models\\Recipe.cs",
+              "RelativeToolTip": "Models\\Recipe.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T17:39:41.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\_ViewStart.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-15T14:32:17.545Z",
+              "WhenOpened": "2024-05-15T16:08:09.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJgAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-22T19:01:28.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T17:39:41.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Intro.js",
+              "DocumentMoniker": "D:\\myReactPortfolio\\react-portfolio\\src\\components\\Intro\\Intro.js",
+              "ToolTip": "D:\\myReactPortfolio\\react-portfolio\\src\\components\\Intro\\Intro.js",
+              "ViewState": "AgIAABMAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-05-18T17:04:21.414Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Foods.cshtml",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Home\\Foods.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Foods.cshtml",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Home\\Foods.cshtml",
+              "RelativeToolTip": "Views\\Home\\Foods.cshtml",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAxwF8AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2023-12-30T19:07:33.659Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 34,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAABBwF8AAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-30T14:31:41.771Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 64,
-              "Title": "Admin.cs",
-              "DocumentMoniker": "D:\\Online Fast Food Delivery project\\Models\\Admin.cs",
-              "ToolTip": "D:\\Online Fast Food Delivery project\\Models\\Admin.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAABBwBQAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-14T11:19:35.802Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 65,
-              "Title": "IADProductService.cs",
-              "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Interfaces\\IADProductService.cs",
-              "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Interfaces\\IADProductService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-14T19:36:22.879Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 66,
-              "Title": "ChatGPT.cs",
-              "DocumentMoniker": "D:\\Online Fast Food Delivery project\\Models\\ChatGPT.cs",
-              "ToolTip": "D:\\Online Fast Food Delivery project\\Models\\ChatGPT.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-14T19:14:05.494Z",
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAawJQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2023-12-22T19:02:19.715Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 35,
+              "Title": "AdminDashboard.cshtml",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Admin\\AdminDashboard.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\AdminDashboard.cshtml",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Admin\\AdminDashboard.cshtml",
+              "RelativeToolTip": "Views\\Admin\\AdminDashboard.cshtml",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBMAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2023-12-22T18:46:50.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 102,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Shared\\Components\\Food\\Default.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Components\\Food\\Default.cshtml",
+              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Shared\\Components\\Food\\Default.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Components\\Food\\Default.cshtml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-15T14:32:17.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "Admin.cs",
+              "DocumentMoniker": "D:\\Online Fast Food Delivery project\\Models\\Admin.cs",
+              "ToolTip": "D:\\Online Fast Food Delivery project\\Models\\Admin.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAABBwBQAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-14T11:19:35.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "IADProductService.cs",
+              "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Interfaces\\IADProductService.cs",
+              "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Interfaces\\IADProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-14T19:36:22.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "ChatGPT.cs",
+              "DocumentMoniker": "D:\\Online Fast Food Delivery project\\Models\\ChatGPT.cs",
+              "ToolTip": "D:\\Online Fast Food Delivery project\\Models\\ChatGPT.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-14T19:14:05.494Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
               "Title": "OrderController.cs",
               "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "Controllers\\OrderController.cs",
@@ -964,18 +975,17 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "web.config",
               "DocumentMoniker": "D:\\publish\\web.config",
               "ToolTip": "D:\\publish\\web.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-03-12T18:11:13.509Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-12T18:11:13.509Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "launchSettings.json",
               "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -988,27 +998,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 66,
               "Title": "OrderStatusDao.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\OrderStatusDao.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\OrderStatusDao.cs",
               "ViewState": "AgIAABYAAAAAAAAAAABBwDYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-12T16:36:34.333Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "UserProfile.cshtml",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Home\\UserProfile.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\UserProfile.cshtml",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Home\\UserProfile.cshtml",
-              "RelativeToolTip": "Views\\Home\\UserProfile.cshtml",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAqwHgAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2023-12-22T19:09:36.918Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-12T16:36:34.333Z"
             },
             {
               "$type": "Document",
@@ -1038,14 +1034,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 67,
               "Title": "HomePageDao.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\HomePageDao.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\HomePageDao.cs",
               "ViewState": "AgIAAHgCAAAAAAAAAAAkwLoCAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-30T19:08:15.184Z",
-              "EditorCaption": ""
+              "WhenOpened": "2023-12-30T19:08:15.184Z"
             },
             {
               "$type": "Document",
@@ -1088,69 +1083,63 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 68,
               "Title": "TblUser.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\DAL\\Models\\TblUser.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\DAL\\Models\\TblUser.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAQwB8AAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-29T17:50:33.254Z",
-              "EditorCaption": ""
+              "WhenOpened": "2023-12-29T17:50:33.254Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 69,
               "Title": "TblFood.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\DAL\\Models\\TblFood.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\DAL\\Models\\TblFood.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAIwC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-22T18:32:41.762Z",
-              "EditorCaption": ""
+              "WhenOpened": "2023-12-22T18:32:41.762Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 70,
               "Title": "TblCategory.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\DAL\\Models\\TblCategory.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\DAL\\Models\\TblCategory.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAIwCIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-22T18:32:45.953Z",
-              "EditorCaption": ""
+              "WhenOpened": "2023-12-22T18:32:45.953Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 71,
               "Title": "CategoryDao.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\CategoryDao.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\CategoryDao.cs",
               "ViewState": "AgIAAJUAAAAAAAAAAAAIwKkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-22T18:15:27.957Z",
-              "EditorCaption": ""
+              "WhenOpened": "2023-12-22T18:15:27.957Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 72,
               "Title": "CategoryDAO.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Interfaces\\CategoryDAO.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Interfaces\\CategoryDAO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-13T16:15:40.702Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-13T16:15:40.702Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 73,
               "Title": "TblCart.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\DAL\\Models\\TblCart.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\DAL\\Models\\TblCart.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T16:52:04.941Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-21T16:52:04.941Z"
             },
             {
               "$type": "Document",
@@ -1180,25 +1169,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 74,
               "Title": "AdminSessionDao.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\AdminSessionDao.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\AdminSessionDao.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAIwCkAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-14T05:25:11.641Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-14T05:25:11.641Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 75,
               "Title": "AdminSessionDAO.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Interfaces\\AdminSessionDAO.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Interfaces\\AdminSessionDAO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T16:45:16.611Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-21T16:45:16.611Z"
             },
             {
               "$type": "Document",
@@ -1215,97 +1202,77 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 76,
               "Title": "AdminLoginDao.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\AdminLoginDao.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\AdminLoginDao.cs",
               "ViewState": "AgIAAJMAAAAAAAAAAAAIwKsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-14T05:25:09.936Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-14T05:25:09.936Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 77,
               "Title": "AdminLogin.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Interfaces\\AdminLogin.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Interfaces\\AdminLogin.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-14T08:09:35.753Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-14T08:09:35.753Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 78,
               "Title": "CheckoutDAO.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Interfaces\\CheckoutDAO.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Interfaces\\CheckoutDAO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-14T21:06:14.707Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-14T21:06:14.707Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 79,
               "Title": "CheckoutDao.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\CheckoutDao.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\CheckoutDao.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAIwGgAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-14T21:06:42.77Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-14T21:06:42.77Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 80,
               "Title": "CartDAO.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Interfaces\\CartDAO.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Interfaces\\CartDAO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T16:34:38.137Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-21T16:34:38.137Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 81,
               "Title": "UserLogin.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Interfaces\\UserLogin.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Interfaces\\UserLogin.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-29T16:28:16.855Z",
-              "EditorCaption": ""
+              "WhenOpened": "2023-12-29T16:28:16.855Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "UserSignUp.cshtml",
-              "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\User\\UserSignUp.cshtml",
-              "RelativeDocumentMoniker": "Views\\User\\UserSignUp.cshtml",
-              "ToolTip": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\User\\UserSignUp.cshtml",
-              "RelativeToolTip": "Views\\User\\UserSignUp.cshtml",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAqwHsAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2023-12-30T16:46:20.541Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 82,
               "Title": "HomePageDAO.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Interfaces\\HomePageDAO.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Interfaces\\HomePageDAO.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAIwCEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-30T19:47:31.288Z",
-              "EditorCaption": ""
+              "WhenOpened": "2023-12-30T19:47:31.288Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 47,
               "Title": "OnlineFastFoodDelivery.csproj",
               "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\OnlineFastFoodDelivery.csproj",
               "RelativeDocumentMoniker": "OnlineFastFoodDelivery.csproj",
@@ -1313,34 +1280,31 @@
               "RelativeToolTip": "OnlineFastFoodDelivery.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-02-19T12:20:42.794Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-19T12:20:42.794Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 83,
               "Title": "ADProductService.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\ADProductService.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\ADProductService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-14T19:38:27.794Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-14T19:38:27.794Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 84,
               "Title": "BotAPIService.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\BotAPIService.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\BotAPIService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-14T19:16:15.486Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-14T19:16:15.486Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 48,
               "Title": "Index.cshtml",
               "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Moderator\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Moderator\\Index.cshtml",
@@ -1353,18 +1317,17 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 85,
               "Title": "IBotAPIService.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Interfaces\\IBotAPIService.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Interfaces\\IBotAPIService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-14T19:15:05.965Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-14T19:15:05.965Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 49,
               "Title": "Index.cshtml",
               "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\ChatGPT\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\ChatGPT\\Index.cshtml",
@@ -1377,29 +1340,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 86,
               "Title": "AdminViewModel.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\Models\\ViewModel\\AdminViewModel.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\Models\\ViewModel\\AdminViewModel.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAABBwBIAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-14T05:12:54.606Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-14T05:12:54.606Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 87,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\Models\\User.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\Models\\User.cs",
               "ViewState": "AgIAABQAAAAAAAAAAABBwCsAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-29T17:50:57.442Z",
-              "EditorCaption": ""
+              "WhenOpened": "2023-12-29T17:50:57.442Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 51,
               "Title": "SubCategoryController.cs",
               "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Controllers\\SubCategoryController.cs",
               "RelativeDocumentMoniker": "Controllers\\SubCategoryController.cs",
@@ -1412,18 +1373,17 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 88,
               "Title": "HomePageViewModel.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\Models\\ViewModel\\HomePageViewModel.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\Models\\ViewModel\\HomePageViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-14T05:12:57.877Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-14T05:12:57.877Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 50,
               "Title": "Index.cshtml",
               "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Order\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Order\\Index.cshtml",
@@ -1436,62 +1396,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 89,
               "Title": "SubCategoryDao.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\SubCategoryDao.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Implementation\\SubCategoryDao.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAYwDEAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-13T16:50:43.716Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-13T16:50:43.716Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 90,
               "Title": "OrderDetail.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\Models\\OrderDetail.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\Models\\OrderDetail.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-13T17:31:25.313Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-13T17:31:25.313Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 91,
               "Title": "Order.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\Models\\Order.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\Models\\Order.cs",
               "ViewState": "AgIAABAAAAAAAAAAAABBwCUAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-13T11:24:28.334Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-13T11:24:28.334Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 92,
               "Title": "User_ViewModel.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\Models\\ViewModel\\User_ViewModel.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\Models\\ViewModel\\User_ViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-13T17:10:48.883Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-13T17:10:48.883Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 93,
               "Title": "OrderStatusDAO.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Interfaces\\OrderStatusDAO.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Interfaces\\OrderStatusDAO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-12T17:18:18.065Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-12T17:18:18.065Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 52,
               "Title": "Index.cshtml",
               "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\SubCategory\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\SubCategory\\Index.cshtml",
@@ -1504,84 +1459,77 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 94,
               "Title": "SubCategory.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\Models\\SubCategory.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\Models\\SubCategory.cs",
               "ViewState": "AgIAABwAAAAAAAAAAABBwDIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-13T16:43:04.998Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-13T16:43:04.998Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 95,
               "Title": "SubCategoryDAO.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Interfaces\\SubCategoryDAO.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Interfaces\\SubCategoryDAO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-13T16:52:34.981Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-13T16:52:34.981Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 96,
               "Title": "FoodType.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\Models\\FoodType.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\Models\\FoodType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-13T16:04:51.421Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-13T16:04:51.421Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 97,
               "Title": "Food.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\Models\\Food.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\Models\\Food.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAuwD4AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-13T12:29:24.871Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-13T12:29:24.871Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 99,
+              "DocumentIndex": 98,
               "Title": "FoodDAO.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\BLL\\Interfaces\\FoodDAO.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\BLL\\Interfaces\\FoodDAO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-13T12:34:45.941Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-13T12:34:45.941Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 99,
               "Title": "Cart.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\Models\\Cart.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\Models\\Cart.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-12T18:29:04.305Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-12T18:29:04.305Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 101,
+              "DocumentIndex": 100,
               "Title": "MailSettings.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\Models\\MailSettings.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\Models\\MailSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-30T11:19:05.209Z",
-              "EditorCaption": ""
+              "WhenOpened": "2023-12-30T11:19:05.209Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 53,
               "Title": "Add_Edit.cshtml",
               "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\SubCategory\\Add_Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\SubCategory\\Add_Edit.cshtml",
@@ -1594,18 +1542,17 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 101,
               "Title": "Email.cs",
               "DocumentMoniker": "D:\\Online Fast Food Delivery project\\Models\\Email.cs",
               "ToolTip": "D:\\Online Fast Food Delivery project\\Models\\Email.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-30T10:58:46.173Z",
-              "EditorCaption": ""
+              "WhenOpened": "2023-12-30T10:58:46.173Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 54,
               "Title": "Add_Edit.cshtml",
               "DocumentMoniker": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\Views\\Role\\Add_Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\Role\\Add_Edit.cshtml",

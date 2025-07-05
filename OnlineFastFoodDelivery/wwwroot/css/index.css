@@ -178,7 +178,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-
 .section-padding {
     padding: 6rem 0; /* More padding for sections */
 }
@@ -793,29 +792,37 @@ h1, h2, h3, h4, h5, h6 {
     }
 
 .form-control {
-    background-color: #1e1e1e;
-    border: 1px solid #333;
-    color: #f0f0f0;
-    padding: 0.9rem 1.2rem;
-    border-radius: 1rem;
-    transition: all 0.3s ease;
+    background-color: #fff; /* clean white input background */
+    border: 1px solid #FFCC00; /* yellow border to match theme */
+    color: #000; /* black text for clarity */
+    padding: 0.85rem 1.1rem;
+    border-radius: 0.75rem;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
     font-size: 1rem;
+    font-family: inherit;
 }
 
+    .form-control::placeholder {
+        color: #FFCC00;
+        opacity: 0.8;
+    }
+
     .form-control:focus {
-        background-color: #262626;
-        border-color: #FF9933; /* Saffron accent */
-        box-shadow: 0 0 0 0.25rem rgba(255, 153, 51, 0.3);
-        color: #fff;
+        background-color: #fff;
+        border-color: #FFB300; /* slightly deeper yellow for focus */
+        box-shadow: 0 0 0 0.2rem rgba(255, 204, 0, 0.3); /* glowing yellow shadow */
+        color: #000;
         outline: none;
     }
 
+/* Textarea Specific */
 textarea.form-control {
-    border-radius: 1rem;
+    border-radius: 0.75rem;
     resize: vertical;
     min-height: 150px;
     line-height: 1.6;
 }
+
 
 
 .footer {

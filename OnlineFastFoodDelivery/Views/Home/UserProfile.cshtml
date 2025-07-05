@@ -17,8 +17,14 @@
             <div class="col-lg-4">
                 <div class="card mb-4">
                     <div class="card-body text-center">
-                        <img src="data:image/png;base64,@Convert.ToBase64String(Model._user.Image)" alt="avatar"
-                             class="rounded-circle img-fluid" style="width: 150px;">
+                        @if (Model._user.Image != null)
+                        {
+                            var base64 = Convert.ToBase64String(Model._user.Image);
+                            var imageSrc = $"data:image/png;base64,{base64}";
+                            <img src="data:image/png;base64,@Convert.ToBase64String(Model._user.Image)" alt="avatar"
+                                 class="rounded-circle img-fluid" style="width: 150px;">
+                        }
+                       
                         <h5 class="my-3 row-header text-black" style="font-size:25px">@Model._user.FullName</h5>
                     </div>
                 </div>
@@ -69,9 +75,6 @@
                         <div class="row">
                             <table class="table table-bordered table-responsive p-2">
                                 <thead>
-                               @*  <th>
-                                    OrderID
-                                </th> *@
                                 <th>
                                     Food Name
                                 </th>
@@ -81,58 +84,61 @@
                                 <th>
                                     Order Status
                                 </th>
-                              @*   <th>
-                                    Order Date
-                                </th> *@
                                 </thead>
                                 <tbody>
-                            @foreach(var order in Model.OrderDetails){
-                                
-                                        <tr>
-                                            @* <td>
+                                    @{
+                                        if (Model.OrderDetails.Count>0){
+                                            @foreach (var order in Model.OrderDetails)
+                                            {
+
+                                                <tr>
+                                                    @* <td>
                                                 @order.OrderId
                                             </td> *@
-                                           @*  <td>
+                                                    @*  <td>
                                                 @order.FoodId
                                             </td> *@
-                                            <td>
-                                                @order.FoodName
-                                            </td>
-                                            <td>
-                                                @order.NoOfServings
-                                            </td>
-                                            <td>
-                                                @if (order.OrderStatus == "Cancelled")
-                                                {
-                                                    <span class="text-danger">@order.OrderStatus</span>
-                                                }else if (order.OrderStatus == "Delivered")
-                                                {
-                                                    <span class="text-success">@order.OrderStatus</span>
-                                                }
-                                                else if (order.OrderStatus == "Waiting to get picked up by delivery partner")
-                                                {
-                                                    <span class="text-secondary">@order.OrderStatus</span>
-                                                }else if(order.OrderStatus=="Out For Delivery")
-                                                {
-                                                    <span class="text-primary">@order.OrderStatus</span>
-                                                }
-                                                else if (order.OrderStatus == "In Process")
-                                                {
-                                                    <span class="text-info">@order.OrderStatus</span>
-                                                }
-                                                else if (order.OrderStatus == "Picked By Delivery Person")
-                                                {
-                                                    <span class="text-black-50">@order.OrderStatus</span>
-                                                }
+                                                    <td>
+                                                        @order.FoodName
+                                                    </td>
+                                                    <td>
+                                                        @order.NoOfServings
+                                                    </td>
+                                                    <td>
+                                                        @if (order.OrderStatus == "Cancelled")
+                                                        {
+                                                            <span class="text-danger">@order.OrderStatus</span>
+                                                        }
+                                                        else if (order.OrderStatus == "Delivered")
+                                                        {
+                                                            <span class="text-success">@order.OrderStatus</span>
+                                                        }
+                                                        else if (order.OrderStatus == "Waiting to get picked up by delivery partner")
+                                                        {
+                                                            <span class="text-secondary">@order.OrderStatus</span>
+                                                        }
+                                                        else if (order.OrderStatus == "Out For Delivery")
+                                                        {
+                                                            <span class="text-primary">@order.OrderStatus</span>
+                                                        }
+                                                        else if (order.OrderStatus == "In Process")
+                                                        {
+                                                            <span class="text-info">@order.OrderStatus</span>
+                                                        }
+                                                        else if (order.OrderStatus == "Picked By Delivery Person")
+                                                        {
+                                                            <span class="text-black-50">@order.OrderStatus</span>
+                                                        }
 
 
-                                            </td>
-                                          @*   <td>
-                                                @order.OrderDate.Value.ToString("dd/MM/yyyy")
-                                            </td> *@
-                                           
-                                        </tr>
+                                                    </td>
+
+                                                </tr>
+                                            }
+                                        }
                                     }
+                                    
+                            
                                     </tbody>
                                 </table>
                            
