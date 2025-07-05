@@ -2163,6 +2163,7 @@ wwwroot\img\DiverseMenu.png
 wwwroot\img\FastDelivery.png
 wwwroot\img\FreshSpices.jpeg
 wwwroot\img\HandMadePsta.jpg
+wwwroot\img\Loader.gif
 wwwroot\img\LocalProduce.jpeg
 wwwroot\img\Login.jpeg
 wwwroot\img\Logo.png

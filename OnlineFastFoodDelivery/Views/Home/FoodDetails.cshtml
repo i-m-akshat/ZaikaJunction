@@ -5,46 +5,56 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<div class="container mt-5 pt-5">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="card border-0 shadow-lg overflow-hidden rounded-4 bg-white">
+                <div class="row g-0">
+                    <!-- Food Image Section -->
+                    <div class="col-md-6 bg-light d-flex align-items-center justify-content-center p-4 rounded-start-4">
+                        <img src="data:image/png;base64,@Convert.ToBase64String(Model.IconImage)" class="img-fluid rounded-4 shadow-sm" alt="@Model.FoodName" />
+                    </div>
 
-<div>
-  <div class="container-fluid mt-5 pt-5">
-        <div class="col-md-12" style="color:white;">
-          <div class="row justify-content-center align-items-center px-2">
-              <div class="col-md-5" >
-                    <div class="d-flex px-4">
-                       @* <img src="~/images/vegfood.jpg" class="img-fluid" />*@
-                        <img src="data:image/png;base64,@Convert.ToBase64String(Model.IconImage)" class="img-fluid" />
-                       
-                  </div>    
-                    
-              </div>
-              <div class="col-md-7">
-                  <div class="col-12 p-5">
-                      <h2 class="text-center row-header">@Model.FoodName</h2>
-                        <p class="text-white-50">@Model.FoodDesc</p>
-                        <div class="row justify-content-center align-items-center">
-                            <div class="col-12 mt-5 pt-5">
-                               @* <div class="row justify-content-center align-items-center mb-0 mt-auto">*@
-                                @if (Model.Quantity >= 1)
-                                {
-                                    <a role="button" class="btn btn-block btn-outline-light col-12" asp-action="AddToCart" asp-route-FoodID="@Model.FoodId" asp-controller="Cart">Add 1 To Order · ₹ @Model.FoodAmount</a>
-                                }
-                                else
-                                {
-                                    <a role="button" class="btn btn-block btn-outline-light col-12 disabled">Out Of Stock</a> 
-                                }
-                               
-                                @*<a role="button" class="btn btn-block  btn-outline-light float-end">Add To Cart</a>*@
-                               @* </div>*@
+                    <!-- Food Details Section -->
+                    <div class="col-md-6 p-4 p-md-5 d-flex flex-column justify-content-between">
+                        <div>
+                            <h1 class="mb-3 text-warning fw-bolder fs-1">@Model.FoodName</h1>
+                            <p class="mb-4 lead text-secondary">@Model.FoodDesc</p>
+
+                            <div class="mb-4 d-flex justify-content-between align-items-center">
+                                <span class="text-success fw-bold fs-4">₹ @Model.FoodAmount</span>
+
+                                <!-- Optional: Quantity input (currently fixed as 1) -->
+                                <div class="input-group" style="width: auto;">
+                                    <button class="p-2 border btn btn-light rounded-start-3" type="button" id="minusBtn" disabled>
+                                        <i class="fa-solid fa-minus"></i>
+                                    </button>
+                                    <input type="text" class="p-2 text-center border form-control fw-bold" value="1" id="quantityInput" readonly style="width: 70px;">
+                                    <button class="p-2 border btn btn-light rounded-end-3" type="button" id="plusBtn" disabled>
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                </div>
                             </div>
+
+                            @if (Model.Quantity >= 1)
+                            {
+                                <a class="btn btn-warning w-100 fw-bold rounded-pill py-3 shadow-sm"
+                                   asp-controller="Cart"
+                                   asp-action="AddToCart"
+                                   asp-route-FoodID="@Model.FoodId">
+                                    <i class="fa-solid fa-cart-plus me-2"></i> Add to Cart
+                                </a>
+                            }
+                            else
+                            {
+                                <button class="btn btn-outline-secondary w-100 fw-bold rounded-pill py-3 shadow-sm disabled">
+                                    Out Of Stock
+                                </button>
+                            }
                         </div>
-                        
-                        
-                  </div>
-              </div>
-          </div>
-      </div>
-
-  </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-

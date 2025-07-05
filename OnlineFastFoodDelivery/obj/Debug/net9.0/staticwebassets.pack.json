@@ -173,6 +173,10 @@
       "PackagePath": "staticwebassets\\img\\HandMadePsta.jpg"
     },
     {
+      "Id": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\wwwroot\\img\\Loader.gif",
+      "PackagePath": "staticwebassets\\img\\Loader.gif"
+    },
+    {
       "Id": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\wwwroot\\img\\LocalProduce.jpeg",
       "PackagePath": "staticwebassets\\img\\LocalProduce.jpeg"
     },

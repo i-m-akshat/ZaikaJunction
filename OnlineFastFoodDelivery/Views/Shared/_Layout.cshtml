@@ -20,8 +20,13 @@
     <link href="~/lib/fontawesome/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
     <link href="~/css/jquery-ui.min.css" rel="stylesheet" />
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" />
+
     <!-- Scripts -->
     <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
@@ -34,29 +39,63 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <!-- Logo -->
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">
                 <img src="~/img/Logo.png" alt="Logo" class="navbar-logo" />
             </a>
 
-            <!-- Toggler -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- Toggler Button for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Navbar Links -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#why-choose-us">Why Us?</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#our-menu-items">Our Food</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#top-rated">Top Rated</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <!-- Navbar Content -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Right-aligned user and cart options -->
+                <ul class="navbar-nav ms-auto" style="margin-right: 40px;">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#cartModal">
-                            <i class="fas fa-shopping-cart"></i> Cart
-                            <span class="badge badge-cart" id="cart-count">0</span>
+                        @if (!string.IsNullOrEmpty(sessionName))
+                        {
+                            <span class="nav-link">Hello @sessionName</span>
+                        }
+                        else
+                        {
+                            <a class="nav-link" asp-controller="User" asp-action="UserLogin" title="Sign In">
+                                <i class="fa-solid fa-right-to-bracket"></i>
+                            </a>
+                        }
+                    </li>
+
+                    @if (!string.IsNullOrEmpty(sessionName))
+                    {
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-user"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item text-black" asp-controller="Home" asp-action="UserProfile" asp-route-id="@accessor.HttpContext.Session.GetInt32("UserID")">
+                                        Your Profile
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-black" asp-controller="Home" asp-action="Logout">Logout</a>
+                                </li>
+                            </ul>
+                        </li>
+                    }
+
+                    <li class="nav-item">
+                        <a class="nav-link btn position-relative" asp-controller="Cart" asp-action="Index" title="Cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            @if (accessor.HttpContext.Session.GetInt32("CartNumber") != null)
+                            {
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                                    <span id="lblCartNumber">@accessor.HttpContext.Session.GetInt32("CartNumber")</span>
+                                    <span class="visually-hidden">Cart items</span>
+                                </span>
+                            }
                         </a>
                     </li>
                 </ul>

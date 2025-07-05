@@ -5,212 +5,243 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="container-fluid my-5 py-5">
-    <div class="row my-3 mx-2">
-        <div class="col-md-12 shadow-rounded">
-            <div class="row justify-content-center align-content-center my-2 px-3">
-                <div class="col-md-11 rounded-5">
-                    <input class="form-control form-control-sm" type="search" id="tags" role="search" placeholder="Enter the name of food you want to search" />
-                </div>
-                <div class="col-md-1 ">
-                    <a role="button" class="btn btn-sm btn-outline-light" title="search" onclick="goToFoodDetails()"><i class="fa-solid fa-magnifying-glass"></i></a>
-                </div>
+    <!-- Search Bar -->
+    <div class="row my-4 mx-2">
+        <div class="col-md-12">
+            <div class="d-flex justify-content-center align-items-center shadow rounded-pill bg-dark px-3 py-2">
+                <input class="form-control form-control-sm bg-dark text-light border-0 rounded-start-pill me-2"
+                       type="search"
+                       id="tags"
+                       placeholder="Search food..."
+                       aria-label="Search"
+                       style="box-shadow: none;" />
+                <button class="btn btn-outline-light btn-sm rounded-pill px-3"
+                        onclick="goToFoodDetails()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
             </div>
-
         </div>
     </div>
-    <div class="row my-3">
-        <div class="col-md-12 ">
-            <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-filter"></i>&nbsp;Filter</button>
 
-            <div class="offcanvas offcanvas-start text-white" style="background-color:black" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+
+    <!-- Filter Button -->
+    <div class="row my-3">
+        <div class="col-md-12">
+            
+
+            <!-- Offcanvas Filter Panel -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="filterOffcanvas" aria-labelledby="filterOffcanvasLabel">
                 <div class="offcanvas-header">
-                    <h5 class="row-header" id="offcanvasWisthBothOptionsLabel">Filters</h5>
+                    <h5 class="offcanvas-title" id="filterOffcanvasLabel">
+                        <i class="fas fa-filter me-2"></i> Filters
+                    </h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <div class="accordion accordion-flush" id="accordionFlushExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                    Categories
-                                </button>
-                            </h2>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                <ul id="chk_Cat" class="accordion-body text-dark">
-                                    @foreach (var categories in Model.Categories)
-                                    {
-                                        <li class="list-group-item">
-                                            <label for="@categories.CatId">@categories.CatName</label>
-                                            <input id="@categories.CatId" class="form-check-input" type="checkbox" name="Categories" value="@categories.CatId" />
-                                        </li>
-                                    }
-                                </ul>
-                            </div>
+                    <form id="dynamicFilterForm">
+                        <!-- Categories -->
+                        <label class="form-label">Category</label>
+                        <div id="chk_Cat" class="mb-4">
+                           
+                            @foreach (var category in Model.Categories)
+                            {
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="@category.CatId" id="cat_@category.CatId">
+                                    <label class="form-check-label" for="cat_@category.CatId">
+                                        @category.CatName
+                                    </label>
+                                </div>
+                            }
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                    Sub-Categories
-                                </button>
-                            </h2>
-                            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                <ul id="check_SubCat" class="accordion-body">
-                                    @foreach (var sub in Model.SubCategories)
-                                    {
-                                        <li class="list-group-item">
-                                            <label for="@sub.SubCatid">@sub.SubCatName</label>
-                                            <input id="@sub.SubCatid" class="checkbox" type="checkbox" name="Sub Categories" value="@sub.SubCatid" />
-                                        </li>
-                                    }
 
-                                </ul>
-                            </div>
+                        <!-- Subcategories -->
+                        <label class="form-label">Sub Category</label>
+                        <div id="check_SubCat" class=" mb-4">
+                           
+                            @foreach (var sub in Model.SubCategories)
+                            {
+                               <div class="form-check">
+                                    <input class="form-check-input" id="sub_@sub.SubCatid" type="checkbox" value="@sub.SubCatid" />
+                                    <label class="form-check-label" for="sub_@sub.SubCatid">@sub.SubCatName</label>
+                                   
+                                </div>
+                            }
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                    Food Types
-                                </button>
-                            </h2>
-                            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                <ul id="chk_FoodType" class="accordion-body">
 
-                                    @foreach (var foodTypes in Model.FoodTypes)
-                                    {
-                                        <li class="list-group-item">
-                                        <label for="@foodTypes.FoodTypeId">@foodTypes.FoodTypeName</label>
-                                        <input id="@foodTypes.FoodTypeId" type="checkbox" name="Food Type" value="@foodTypes.FoodTypeId" />
-                                        </li>
-                                    }
-                                </ul>
-                            </div>
+                        <!-- Food Types -->
+                        <label class="form-label">Food Types</label>
+                        <div id="chk_FoodType" class="mb-4">
+                          
+                            @foreach (var foodType in Model.FoodTypes)
+                            {
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="@foodType.FoodTypeId" id="type_@foodType.FoodTypeId">
+                                    <label class="form-check-label" for="type_@foodType.FoodTypeId">
+                                        @foodType.FoodTypeName
+                                    </label>
+                                </div>
+                            }
                         </div>
-                    </div>
-                    <a id="btnRemove" class="btn btn-sm btn-outline-light my-4 float-start" asp-controller="Home" asp-action="Foods" role="button">Remove Filters</a>
-                    <a id="btnApply" class="btn btn-sm btn-outline-light my-4 float-end" role="button">Apply Filters</a>
+
+
+                        <!-- Price Range -->
+                     @*    <div class="mb-4">
+                            <label for="priceRange" class="form-label">Price Range</label>
+                            <input type="range" class="form-range" id="priceRange" min="0" max="100" value="100">
+                            <div class="d-flex justify-content-between">
+                                <span>$0</span>
+                                <span>Max $<span id="priceRangeValue">100</span></span>
+                            </div>
+                        </div> *@
+
+                        <!-- Rating Filter -->
+                       @*  <div class="mb-4">
+                            <label for="ratingFilter" class="form-label">Min Rating</label>
+                            <select class="form-select" id="ratingFilter">
+                                <option value="0">Any Rating</option>
+                                <option value="4">4 Stars & Up</option>
+                                <option value="3">3 Stars & Up</option>
+                            </select>
+                        </div> *@
+
+                        <div class="d-flex justify-content-center">
+                            <a id="btnRemove" class="btn btn-sm btn-filter-apply me-3" asp-controller="Home" asp-action="Foods">Remove Filters</a>
+                            <button type="button" id="btnApply" class="btn btn-sm btn-filter-apply">Apply Filters</button>
+                        </div>
+
+                    </form>
                 </div>
             </div>
+
         </div>
-        <div class="row" id="FoodRow">
-            @Html.Partial("_Food",Model.Food)
-        </div>
-        
-      
     </div>
+
+    <!-- Food Cards Grid -->
+    <section class="section-padding">
+        <h2 class="section-title px-4">Explore Our Delicious Menu</h2>
+        <div class="mb-4 d-flex justify-content-end">
+            <button class="btn btn-filter" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterOffcanvas" aria-controls="filterOffcanvas">
+                <i class="fas fa-filter me-2"></i> Filters
+            </button>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 px-4" id="FoodRow">
+            @Html.Partial("_Food", Model.Food)
+        </div>
+    </section>
 </div>
+
 <script type="text/javascript">
     var listCat = [];
-    var listSubCat=[];
-    var listFoodType=[];
-    $('#chk_Cat input[type=checkbox]').on('change', function () {
-        listCat = [];
-        $('#chk_Cat input[type=checkbox]:checked').each(function(){
-            listCat.push($(this).val());
-        });
+    var listSubCat = [];
+    var listFoodType = [];
+
+    // Category checkbox change
+    $('#chk_Cat').on('change', 'input[type=checkbox]', function () {
+        listCat = $('#chk_Cat input[type=checkbox]:checked').map(function () {
+            return $(this).val();
+        }).get();
+
         $.ajax({
             url: 'Home/getSubCategoryBasedOnCat',
-            data: { list: listCat },
             method: 'POST',
+            data: { list: listCat },
             success: function (data) {
-                var size = Object.keys(data).length;
+                $('#check_SubCat').empty();
 
-                if (size != 0) {
-                    $('#check_SubCat').empty();
-                    for (var i = 0; i < size; i++) {
-                        let string = '<li class="list-group-item">' +
-                            ' <label for="' + data[i].subCatid + '">' + data[i].subCatName + '</label>' +
-                            '<input id="' + data[i].subCatid + '"  type="checkbox" name="Sub Categories" value="' + data[i].subCatid + '" />' +
-                            ' </li>';
-
-                        $('#check_SubCat').append(string
-                        );
-                        console.log(data[i]);
-                        console.log(string)
-                    }
-
+                if (data && data.length > 0) {
+                    data.forEach(function (item) {
+                       let listItem = `
+            <div class="form-check">
+                <input class="form-check-input" id="sub_${item.subCatid}" type="checkbox" value="${item.subCatid}" />
+                <label class="form-check-label" for="sub_${item.subCatid}">${item.subCatName}</label>
+            </div>`;
+                        $('#check_SubCat').append(listItem);
+                    });
                 }
-              
-                console.log(data);
             },
-            error: function (error) {
-                console.log(error);
+            error: function (err) {
+                console.error('Sub-category fetch error:', err);
             }
         });
-    console.log('First ' + listCat);
     });
-  
-    $('#check_SubCat ').on('change', 'input[type=checkbox]', function () {
-        debugger;
-        listSubCat = [];
-        $('#check_SubCat input[type=checkbox]:checked').each(function (){
-            listSubCat.push($(this).val());
-        });
-        console.log('Subcat is'+listSubCat);
+
+    // SubCategory checkbox change
+    $('#check_SubCat').on('change', 'input[type=checkbox]', function () {
+        listSubCat = $('#check_SubCat input[type=checkbox]:checked').map(function () {
+            return $(this).val();
+        }).get();
+        console.log('SubCat:', listSubCat);
     });
-    
-    $('#chk_FoodType input[type=checkbox]').on('change',function () {
-        listFoodType = [];
-        $('#chk_FoodType input[type=checkbox]:checked').each(function () {
-            listFoodType.push($(this).val());
-        });
-        console.log(listFoodType);
+
+    // Food Type checkbox change
+    $('#chk_FoodType').on('change', 'input[type=checkbox]', function () {
+        listFoodType = $('#chk_FoodType input[type=checkbox]:checked').map(function () {
+            return $(this).val();
+        }).get();
+        console.log('FoodType:', listFoodType);
     });
-   
-          
+
+    // Apply Filters
     $('#btnApply').on('click', function () {
-       $.ajax({
-            url: 'Home/Filter',
-method:'POST',
-            data: { listCat :listCat,listSubCat:listSubCat,listFoodType:listFoodType},
-            success:function(success){
-                $('#FoodRow').html(success);
-                console.log('Success');
-                 
-            },
-            error:function(err){
-                console.log(err);
-              
-            }
-
-})
-    });
-   
-
-</script>
-<script>
-    function goToFoodDetails() {
-        var FoodName = $('#tags').val();
-
-        console.log(FoodName);
         $.ajax({
-            url: "Home/getFoodIDbyName?FoodName=" + FoodName,
-            method: "GET",
-            success: function (result) {
-                if (result != 0) {
-                    window.location.href = "Home/FoodDetails?FoodID=" + result;
-                } else {
-                    swal("Not Available ! ", "This item is Not Available !", "error");
-                }
-                
+            url: 'Home/Filter',
+            method: 'POST',
+            data: {
+                listCat: listCat,
+                listSubCat: listSubCat,
+                listFoodType: listFoodType
+            },
+            success: function (response) {
+                $('#FoodRow').html(response);
+            },
+            error: function (err) {
+                console.error('Filter error:', err);
             }
-        })
-    }
-    var availableTags;
-    $.ajax({
-        url: 'Home/getAllFoodsName',
-        type: 'GET',
-        success: function (result) {
-
-            availableTags = result;
-            console.log(availableTags);
-        }
-    })
-    $(function () {
-       
-       
-        $("#tags").autocomplete({
-            minLength: 0,
-            source: availableTags
         });
+    });
+
+    // Go to Food Details
+    function goToFoodDetails() {
+        var foodName = $('#tags').val();
+        if (!foodName.trim()) return;
+
+        $.ajax({
+            url: `Home/getFoodIDbyName?FoodName=${encodeURIComponent(foodName)}`,
+            method: 'GET',
+            success: function (result) {
+                if (result && result != 0) {
+                    window.location.href = `Home/FoodDetails?FoodID=${result}`;
+                } else {
+                    swal("Not Available!", "This item is not available.", "error");
+                }
+            },
+            error: function (err) {
+                console.error('Search error:', err);
+            }
+        });
+    }
+
+    // Global variable to store food names for autocomplete
+    var availableTags = [];
+
+    // Fetch food names and initialize autocomplete
+    $(document).ready(function () {
+        $.ajax({
+            url: 'Home/getAllFoodsName',
+            type: 'GET',
+            success: function (result) {
+                availableTags = result;
+                $("#tags").autocomplete({
+                    minLength: 0,
+                    source: availableTags
+                });
+            },
+            error: function (err) {
+                console.error('Autocomplete fetch error:', err);
+            }
+        });
+
+        // Attach search function to global scope
+        window.goToFoodDetails = goToFoodDetails;
     });
 </script>
