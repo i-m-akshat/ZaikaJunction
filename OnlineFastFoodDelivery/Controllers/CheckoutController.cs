@@ -43,54 +43,67 @@ namespace OnlineFastFoodDelivery.Controllers
         }
         public async Task<IActionResult> Checkout()
         {
-            int? UserID = HttpContext.Session.GetInt32("UserID");
-            List<Cart> listCart = new List<Cart>();
-            if (UserID.HasValue)
-            {
+            int? userId = HttpContext.Session.GetInt32("UserID");
 
-                listCart = await _cartDAL.GetAllItems((int)UserID);
-                //ViewBag.SubTotal = await DAL.GetOverallPrice((int)UserID);
-                //return View(listCart);
-            }
-            else
+            if (!userId.HasValue)
             {
                 TempData["Error"] = "Please Login";
                 return RedirectToAction("UserLogin", "User");
             }
-            var domain = "https://localhost:7016/";
+
+            var listCart = await _cartDAL.GetAllItems(userId.Value);
+            if (listCart == null || !listCart.Any())
+            {
+                TempData["Error"] = "Cart is empty";
+                return RedirectToAction("Index", "Cart");
+            }
+
+            // Build dynamic domain from request
+            var domain = $"{Request.Scheme}://{Request.Host}/";
+
             var options = new SessionCreateOptions
             {
-                SuccessUrl = domain + $"Checkout/OrderConfirmation",
-                CancelUrl = domain + $"Checkout/Login",
+                SuccessUrl = domain + "Checkout/OrderConfirmation",
+                CancelUrl = domain + "Cart", // Or a friendly page
                 LineItems = new List<SessionLineItemOptions>(),
                 Mode = "payment"
             };
 
             foreach (var item in listCart)
             {
-                var sessionListitem = new SessionLineItemOptions
+                if (item.FoodAmount <= 0 || item.Quantity <= 0)
+                    continue; // Skip invalid items
+
+                var sessionItem = new SessionLineItemOptions
                 {
                     PriceData = new SessionLineItemPriceDataOptions
                     {
-                        UnitAmount = (long)(item.FoodAmount * 100), // Convert to cents or smallest currency unit
+                        UnitAmount = (long)(item.FoodAmount * 100),
                         Currency = "inr",
                         ProductData = new SessionLineItemPriceDataProductDataOptions
                         {
-                            Name = item.FoodName.ToString(),
+                            Name = item.FoodName
                         }
                     },
                     Quantity = item.Quantity
                 };
-                options.LineItems.Add(sessionListitem);
+
+                options.LineItems.Add(sessionItem);
             }
-            
+
+            if (options.LineItems.Count == 0)
+            {
+                TempData["Error"] = "Cart has no valid items";
+                return RedirectToAction("Index", "Cart");
+            }
+
             var service = new SessionService();
-            Session session = service.Create(options);
-            TempData["Session"] = session.Id;
+            var session = service.Create(options);
+
             Response.Headers.Add("Location", session.Url);
             return new StatusCodeResult(303);
-           
         }
+
         public async Task<IActionResult> OrderConfirmation()
         {
             int? UserID = HttpContext.Session.GetInt32("UserID");
@@ -184,9 +197,9 @@ namespace OnlineFastFoodDelivery.Controllers
             //byte[] imageBytes = System.IO.File.ReadAllBytes(logoPath);
             //string base64Image = Convert.ToBase64String(imageBytes);
             //string logoUrl = $"data:image/png;base64,{base64Image}";
-            string logoUrl = $"https://localhost:7016//img/Logo.png";
+            //string logoUrl = $"https://localhost:7016//img/Logo.png";
 
-
+            string logoUrl = $" https://cdn.githubraw.com/AxA-Software/ZaikaJunction/main/OnlineFastFoodDelivery/wwwroot/img/Logo.png";
 
             Email emailMessage = new Email
             {

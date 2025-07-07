@@ -5,95 +5,71 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-
-
-
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/js/chart.js"></script>
 
-<div class="container">
-    @* <h1 class="row-header">
-        Dashboard
-    </h1> *@
-    <div class="container-fluid mt-5">
-        
-            <div class="row justify-content-center m-0 w-100 mb-4">
-                <div class="col-md-4 my-2">
-                    <div class="card" style="text-decoration:none;cursor:pointer" >
-                       @*  <div class="card-body"> *@
-                    <h1 class="text-black mt-2 mx-2" style="font-size:18px;color:black;font-weight:800;">Total Orders: &nbsp;@Model.count_Orders </h1>
-                            @* <hr /> *@
-                            <div id="chart_Orders" style="object-fit:cover;position:relative">
-                            </div>
-                        @* </div> *@
-                    </div>
-                </div>
-                <div class="col-md-4 my-2">
-                    <div class="card text-black" style="text-decoration:none;cursor:pointer" >
-                        @* <div class="card-body"> *@
-                    <h1 class="text-black mt-2 mx-2" style="font-size:18px;color:black;font-weight:800;">Total Payments: &nbsp;@Model.count_Payments</h1>
-                          @*   <hr /> *@
-                        <div id="chart_Payment" style="object-fit:cover;position:relative">
-                            </div>
-                        @* </div> *@
-                    </div>
-                </div>
-                <div class="col-md-4 my-2">
-                    <div class="card text-black" style="text-decoration:none;cursor:pointer" >
-                       @*  <div class="card-body"> *@
-                    <h1 class="text-black mt-2 mx-2" style="font-size:18px;color:black;font-weight:800;">Total Earnings: ₹&nbsp;@Model.sum_earnings</h1>
-                           @*  <hr /> *@
-                        <div id="chart_Earnings" style="object-fit:cover;position:relative">
-                            </div>
-                       @*  </div> *@
-                    </div>
-                </div>
-                @*  <div class="col-md-3 my-2">
-                <a class="card text-black" style="text-decoration:none;cursor:pointer">
+<div class="container-fluid mt-5">
+    <div class="row g-4">
+        <!-- Total Orders -->
+        <div class="col-md-4">
+            <div class="card border-0 shadow rounded-4 h-100">
                 <div class="card-body">
-                <h1 class="text-black-50" style="font-size:22px;color:black;font-family: 'Permanent Marker', cursive;">Roles</h1>
-                <hr/>
-                <div id="chart_Roles">
+                    <h6 class="text-muted fw-semibold mb-2">Total Orders</h6>
+                    <h3 class="fw-bold text-dark mb-4">@Model.count_Orders</h3>
+                    <div id="chart_Orders" class="chart-box"></div>
+                </div>
+            </div>
+        </div>
 
-                </div>
-                </div>
-                </a>
-                </div> *@
-            </div>
-        <div class="row justify-content-center m-0 w-100 mb-4">
-                <div class="col-md-6 my-2">
-                    <div class="card text-black" style="height:100%">
-                        <div class="card-body">
-                        <h1 class="text-black" style="font-size:18px;color:black;font-weight:800;">
-                            Total Users: &nbsp;@Model.count_Users
-                        </h1>
-                            <hr/>
-                        <div id="chart_Users">
-                        </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="col-md-6 my-2">
-                <div class="card" style="height:100%">
-                    <div class="card-body">
-                        <h1 class="text-black" style="font-size:18px;color:black;font-weight:800;">
-                            Total Admins:&nbsp; @Model.count_Admins
-                        </h1><hr />
-                        <div id="chart_Admins" style="height:100%">
-                        </div>
-                        </div>
-                    </div>
-                    
+        <!-- Total Payments -->
+        <div class="col-md-4">
+            <div class="card border-0 shadow rounded-4 h-100">
+                <div class="card-body">
+                    <h6 class="text-muted fw-semibold mb-2">Total Payments</h6>
+                    <h3 class="fw-bold text-dark mb-4">@Model.count_Payments</h3>
+                    <div id="chart_Payment" class="chart-box"></div>
                 </div>
             </div>
-        
+        </div>
+
+        <!-- Total Earnings -->
+        <div class="col-md-4">
+            <div class="card border-0 shadow rounded-4 h-100">
+                <div class="card-body">
+                    <h6 class="text-muted fw-semibold mb-2">Total Earnings</h6>
+                    <h3 class="fw-bold text-success mb-4">₹@Model.sum_earnings</h3>
+                    <div id="chart_Earnings" class="chart-box"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Users -->
+        <div class="col-md-6">
+            <div class="card border-0 shadow rounded-4 h-100">
+                <div class="card-body">
+                    <h6 class="text-muted fw-semibold mb-2">Total Users</h6>
+                    <h3 class="fw-bold text-primary mb-4">@Model.count_Users</h3>
+                    <div id="chart_Users" class="chart-box tall"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Admins -->
+        <div class="col-md-6">
+            <div class="card border-0 shadow rounded-4 h-100">
+                <div class="card-body">
+                    <h6 class="text-muted fw-semibold mb-2">Total Admins</h6>
+                    <h3 class="fw-bold text-warning mb-4">@Model.count_Admins</h3>
+                    <div id="chart_Admins" class="chart-box tall"></div>
+                </div>
+            </div>
+        </div>
     </div>
-    
-   
-
-
 </div>
+
+
+
+
 <script>
     $(document).ready(function () {
         var chart_Foods, chart_Orders, chart_Earnings, chart_Admins, chart_Users;

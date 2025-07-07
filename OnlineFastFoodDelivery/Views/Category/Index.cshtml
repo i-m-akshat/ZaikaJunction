@@ -2,134 +2,125 @@
 @model CategoryModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Category List";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-<script type="text/javascript">
-    var mainID;
+    <script type="text/javascript">
+        let openModal = (itemID) => {
+            document.getElementById('itemID').value = itemID;
+            $('#staticBackdrop').modal('show');
+        };
 
-    let openModal = (itemID) => {
-        debugger;
-        var txtBox = document.getElementById('itemID');
-        txtBox.value = itemID;
-        $('#staticBackdrop').modal('show');
-    }
-    let deleteItem = () => {
-        var itemID = $('#itemID').val();
-        $.ajax({
-            url: 'Category/Delete?id=' + itemID,
-            type: 'POST',
-            //data: { id: itemID },
-            success: function (result) {
-                $('#staticBackdrop').modal('hide');
-                window.location.reload();
-            },
-            error: function (error) {
-                console.log(error);
-            }
-        })
-    }
-</script>
+        let deleteItem = () => {
+            var itemID = $('#itemID').val();
+            $.ajax({
+                url: 'Category/Delete?id=' + itemID,
+                type: 'POST',
+                success: function () {
+                    $('#staticBackdrop').modal('hide');
+                    window.location.reload();
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        };
 
-<div class="row justify-content-center align-items-center mt-4">
-    <h1 class="row-header text-center">List Of All Categories</h1>
+        function PagerClick(index) {
+            document.getElementById("hfCurrentPageIndex").value = index;
+            document.forms[0].submit();
+        }
+    </script>
 
-    <div class="card col-md-12 col-lg-12 px-2 py-2" style="border-radius:0">
-        <div class="card-body px-2">
-            <form asp-action="Index" asp-asp-controller="Category" method="post">
-            <a class="btn btn-sm btn-outline-dark btn-light" role="button" asp-action="Add_Edit">Add New Category</a>
-            <table class="table table-responsive table-hover table-striped table-bordered">
-                <thead>
-                    <tr>
-                        <th>
-                            Category ID
-                        </th>
-                        <th>
-                            Category Name
-                        </th>
+<div class="row justify-content-center mt-5">
+    <div class="col-lg-12">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="mb-0 text-dark">📁 List of All Categories</h2>
+            <a asp-action="Add_Edit" class="btn btn-outline-dark btn-sm">+ Add New Category</a>
+        </div>
 
-                        <th>
-                            Description
-                        </th>
-
-                        <th>
-                            Banner Image
-                        </th>
-                        <th>
-                            Icon Image
-                        </th>
-
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model.categories)
-                    {
+        <div class="card shadow-sm p-3">
+            <form asp-action="Index" asp-controller="Category" method="post">
+                <table class="table table-bordered table-striped table-hover align-middle text-center">
+                    <thead class="table-light">
                         <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.CatId)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.CatName)
-                            </td>
-
-                            <td>
-                                @Html.DisplayFor(modelItem => item.CatDesc)
-                            </td>
-                            @if (item.BannerImage != null)
-                            {
-                                <td>
-                                    <img src="data:image/png;base64,@Convert.ToBase64String(item.BannerImage)" style="height:150px; width:200px" />
-                                </td>
-                            }
-                            @if (item.IconImage != null)
-                            {
-                                <td>
-                                    <img src="data:image/png;base64,@Convert.ToBase64String(item.IconImage)" style="height:150px; width:200px" />
-                                </td>
-                            }
-                            <td>
-                            </td>
-
-                            <td>
-                                <a asp-action="Add_Edit" class="btn btn-warning my-3" title="Edit" asp-route-id=@item.CatId><i class="fa-regular fa-pen-to-square"></i></a>
-
-                                <a id="btnShowDelete" role="button" onclick="openModal ('@item.CatId')" class="btn btn-danger my-3">
-                                    <i class="fa-solid fa-trash"></i>
-                                </a>
-
-                            </td>
+                            <th>Category ID</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Banner Image</th>
+                            <th>Icon Image</th>
+                            <th>Actions</th>
                         </tr>
-                    }
-                </tbody>
-            </table>
-            <br />
-            <table cellpadding="0" cellspacing="0" class="my-3">
-                <tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.categories)
+                        {
+                            <tr>
+                                <td>@item.CatId</td>
+                                <td>@item.CatName</td>
+                                <td>@item.CatDesc</td>
+                                <td>
+                                    @if (item.BannerImage != null)
+                                    {
+                                        <img src="data:image/png;base64,@Convert.ToBase64String(item.BannerImage)" class="img-fluid rounded" style="max-height:100px;" />
+                                    }
+                                </td>
+                                <td>
+                                    @if (item.IconImage != null)
+                                    {
+                                        <img src="data:image/png;base64,@Convert.ToBase64String(item.IconImage)" class="img-thumbnail" style="max-height:80px;" />
+                                    }
+                                </td>
+                                <td>
+                                    <a asp-action="Add_Edit" asp-route-id="@item.CatId" class="btn btn-sm btn-warning me-1" title="Edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </a>
+                                    <button type="button" onclick="openModal('@item.CatId')" class="btn btn-sm btn-danger">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+                <!-- Pagination -->
+                <div class="d-flex justify-content-center mt-4">
                     @for (int i = 1; i <= Model.PageCount; i++)
                     {
-                        <center>
-                        <td>
-                                @if (i != Model.CurrentPageIndex)
-                                {
-                                <a class="btn btn-sm btn-outline-dark mx-1" style="border-radius:0;" href="javascript:PagerClick(@i);">@i</a>
-                                }
-                                else
-                                {
-                                <span class="btn btn-sm btn-outline-white" style="border-radius:0;">@i</span>
-                                }
-                        </td></center>
+                        if (i == Model.CurrentPageIndex)
+                        {
+                            <span class="btn btn-sm btn-light mx-1 border">@i</span>
+                        }
+                        else
+                        {
+                            <a href="javascript:PagerClick(@i);" class="btn btn-sm btn-outline-dark mx-1">@i</a>
+                        }
                     }
-                </tr>
-            </table>
-            <input type="hidden" id="hfCurrentPageIndex" name="currentPageIndex" />
+                </div>
+
+                <input type="hidden" id="hfCurrentPageIndex" name="currentPageIndex" />
             </form>
         </div>
     </div>
 </div>
-<script type="text/javascript">
-    function PagerClick(index) {
-        document.getElementById("hfCurrentPageIndex").value = index;
-        document.forms[0].submit();
-    }
-</script>
 
+<!-- Delete Confirmation Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-3">
+            <div class="modal-header">
+                <h5 class="modal-title text-danger">Confirm Delete</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete this category?
+                <input type="hidden" id="itemID" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button onclick="deleteItem()" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

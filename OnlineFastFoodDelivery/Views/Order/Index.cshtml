@@ -1,149 +1,94 @@
-﻿@using Models;
+﻿@using Models
 @model orderModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Orders";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-@* <script type="text/javascript">
-    var mainID;
 
-    let openModal = (itemID) => {
-        debugger;
-        var txtBox = document.getElementById('itemID');
-        txtBox.value = itemID;
-        $('#staticBackdrop_Order').modal('show');
-        window.location.reload();
-    }
-    let DeliverItem = () => {
-        var itemID = $('#itemID').val();
-        $.ajax({
-            url: 'Order/Delivery?id=' + itemID,
-            type: 'POST',
-            //data: { id: itemID },
-            success: function (result) {
-                $('#staticBackdrop').modal('hide');
-                window.location.reload();
-            }, do
-                error: function(error) {
-                console.log(error);
-            }
-        })
-    }
-</script> *@
+    <script type="text/javascript">
+        function PagerClick(index) {
+            document.getElementById("hfCurrentPageIndex").value = index;
+            document.forms[0].submit();
+        }
+    </script>
 
-<div class="row justify-content-center align-items-center mt-4">
-    <h1 class="row-header text-center">List Of All Orders</h1>
-    @* <div class="modal fade" id="staticBackdrop_Order" data-bs-backdrop="static"
-         data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Confirmation</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Do You Really Want To Update This ?
-                    <input id="itemID" type="hidden" name="itemID" />
-                </div>
 
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal"><i class="fa-regular fa-circle-xmark"></i></button>
-                    <button class="btn btn-sm btn-success my-3" title="Update" onclick="DeliverItem()"><i class="fa-regular fa-circle-check"></i></button>
-                </div>
-            </div>
+<div class="row justify-content-center mt-5">
+    <div class="col-lg-12">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="text-dark">🧾 List of All Orders</h2>
         </div>
-    </div> *@
-    <div class="card col-md-12 col-lg-12 px-2 py-2" style="border-radius:0">
-        <div class="card-body px-2">
 
+        <div class="card shadow-sm p-3 rounded-3">
             <form asp-action="Index" asp-controller="Order" method="post">
-            @* <a class="btn btn-sm btn-outline-dark btn-light" role="button" asp-action="Add_Edit">Add New Food </a> *@
-            <table class="table table-responsive table-hover table-striped table-bordered">
-                <thead>
-                    <tr>
-                        <th>
-                           Order ID
-                        </th>
-                        <th>
-                            @* @Html.DisplayNameFor(model => model.listOrder.OrderStatus) *@
-                            Order Status
-                        </th>
-
-                        <th>
-                           @*  @Html.DisplayNameFor(model => model.ProcessedBy_Name) *@
-                           Processed By
-                        </th>
-
-                        <th>
-                            @* @Html.DisplayNameFor(model => model.ProcessedDate) *@
-                            Processed Date
-                        </th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model.listOrder)
-                    {
+                <table class="table table-bordered table-striped table-hover align-middle text-center">
+                    <thead class="table-light">
                         <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.OrderId)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.OrderStatus)
-                            </td>
-
-                            <td>
-                                @Html.DisplayFor(modelItem => item.ProcessedBy_Name)
-                            </td>
-
-                            <td>
-                                @Html.DisplayFor(modelItem => item.ProcessedDate)
-                            </td>
-
-                          
-                            <td>
-                                <a role="button" class="btn btn-sm btn-danger" title="Cancel" asp-route-id="@item.OrderId" asp-action="Cancelled" asp-controller="Order"><i class="fa-regular fa-circle-xmark"></i></a>
-                                <a role="button" class="btn btn-sm btn-info" title="Waiting To be picked" asp-route-id="@item.OrderId" asp-action="Waiting" asp-controller="Order"><i class="fa-solid fa-hourglass-end"></i></a>
-                                @* <a role="button" class="btn btn-sm btn-warning"><i class="fa-solid fa-truck-ramp-box"></i></a> *@
-                                <a role="button" class="btn btn-sm btn-warning" title="Picked Up by Delivery Person" asp-route-id="@item.OrderId" asp-action="Picked" asp-controller="Order"><i class="fa-solid fa-people-carry-box"></i></a>
-                                <a role="button" class="btn btn-sm btn-primary" asp-route-id="@item.OrderId" title="OutForDelivery" asp-action="OutForDelivery" asp-controller="Order"><i class="fa-solid fa-truck-fast"></i></a>
-                                @* <a role="button" class="btn btn-sm btn-info"><i class="fa-solid fa-route"></i></a> *@
-                                <a role="button" class="btn btn-sm btn-success" title="Delivered" asp-route-id="@item.OrderId" asp-action="Deliver" asp-controller="Order"><i class="fa-regular fa-circle-check"></i></a>
-                            </td>
+                            <th>Order ID</th>
+                            <th>Order Status</th>
+                            <th>Processed By</th>
+                            <th>Processed Date</th>
+                            <th>Actions</th>
                         </tr>
-                    }
-                </tbody>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.listOrder)
+                        {
+                            <tr>
+                                <td>@item.OrderId</td>
+                                <td>@item.OrderStatus</td>
+                                <td>@item.ProcessedBy_Name</td>
+                                <td>@item.ProcessedDate</td>
+                                <td>
+                                    <a asp-action="Cancelled" asp-route-id="@item.OrderId" asp-controller="Order"
+                                       class="btn btn-sm btn-danger me-1" title="Cancel">
+                                        <i class="fa-regular fa-circle-xmark"></i>
+                                    </a>
 
-            </table>
-            <br/>
-            <table cellpadding="0" cellspacing="0" class="my-3">
-                    <tr>
-                    @for (int i = 1; i <= Model.PageCount; i++) 
-                    {
-                           <center><td>
-                            @if (i != Model.CurrentPageIndex)
-                            {
-                                    <a class="btn btn-sm btn-outline-dark mx-1" style="border-radius:0;" href="javascript:PagerClick(@i);">@i</a>
-                            }
-                            else
-                            {
-                                    <span class="btn btn-sm btn-outline-light text-dark" style="border-radius:0;">@i</span>
-                            }
-                            </td></center>
+                                    <a asp-action="Waiting" asp-route-id="@item.OrderId" asp-controller="Order"
+                                       class="btn btn-sm btn-info me-1" title="Waiting To Be Picked">
+                                        <i class="fa-solid fa-hourglass-end"></i>
+                                    </a>
+
+                                    <a asp-action="Picked" asp-route-id="@item.OrderId" asp-controller="Order"
+                                       class="btn btn-sm btn-warning me-1" title="Picked Up by Delivery Person">
+                                        <i class="fa-solid fa-people-carry-box"></i>
+                                    </a>
+
+                                    <a asp-action="OutForDelivery" asp-route-id="@item.OrderId" asp-controller="Order"
+                                       class="btn btn-sm btn-primary me-1" title="Out for Delivery">
+                                        <i class="fa-solid fa-truck-fast"></i>
+                                    </a>
+
+                                    <a asp-action="Deliver" asp-route-id="@item.OrderId" asp-controller="Order"
+                                       class="btn btn-sm btn-success" title="Delivered">
+                                        <i class="fa-regular fa-circle-check"></i>
+                                    </a>
+                                </td>
+                            </tr>
                         }
-                </tr>
-            </table>
-            <input type="hidden" id="hfCurrentPageIndex" name="currentPageIndex" />
+                    </tbody>
+                </table>
+
+                <!-- Pagination -->
+                <div class="d-flex justify-content-center mt-4">
+                    @for (int i = 1; i <= Model.PageCount; i++)
+                    {
+                        if (i == Model.CurrentPageIndex)
+                        {
+                            <span class="btn btn-sm btn-light border text-dark mx-1">@i</span>
+                        }
+                        else
+                        {
+                            <a href="javascript:PagerClick(@i);" class="btn btn-sm btn-outline-dark mx-1">@i</a>
+                        }
+                    }
+                </div>
+
+                <input type="hidden" id="hfCurrentPageIndex" name="currentPageIndex" />
             </form>
         </div>
     </div>
 </div>
-
-<script type="text/javascript">
-    function PagerClick(index) {
-        document.getElementById("hfCurrentPageIndex").value = index;
-        document.forms[0].submit();
-    }
-</script>

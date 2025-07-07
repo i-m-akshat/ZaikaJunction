@@ -1,122 +1,87 @@
 ﻿@model IEnumerable<Models.Admin>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Moderator List";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <script type="text/javascript">
-    var mainID;
-
-    let openModal = (itemID) => {
-        debugger;
-        var txtBox = document.getElementById('itemID');
-        txtBox.value = itemID;
+    function openModal(itemID) {
+        document.getElementById('itemID').value = itemID;
         $('#staticBackdrop').modal('show');
-        window.location.reload();
     }
-    let deleteItem = () => {
-        var itemID = $('#itemID').val();
+
+    function deleteItem() {
+        const itemID = $('#itemID').val();
         $.ajax({
             url: 'Moderator/Delete?id=' + itemID,
             type: 'POST',
-            //data: { id: itemID },
-            success: function (result) {
+            success: function () {
                 $('#staticBackdrop').modal('hide');
-                window.location.reload();
-            }, do
-                    error: function(error) {
-                console.log(error);
+                location.reload();
+            },
+            error: function (error) {
+                console.error(error);
             }
-        })
+        });
     }
 </script>
 
 <div class="row justify-content-center align-items-center mt-4">
-    <h1 class="row-header text-center">List Of All Moderators</h1>
+    <h1 class="row-header text-center">List of All Moderators</h1>
 
-    <div class="card col-md-12 col-lg-12 px-2 py-2" style="border-radius:0">
+    <div class="card col-md-12 col-lg-12 px-2 py-2" style="border-radius: 0">
         <div class="card-body px-2">
-            <a class="btn btn-sm btn-outline-dark btn-light" role="button" asp-action="Add_Edit">Add New Admin</a>
+            <a class="btn btn-sm btn-outline-dark mb-3" role="button" asp-action="Add_Edit">Add New Admin</a>
+
             <table class="table table-responsive table-hover table-striped table-bordered">
                 <thead>
                     <tr>
-                        <th>
-                            @Html.DisplayNameFor(model => model.FullName)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.AdminName)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.RoleName)
-                        </th>
-
-                        <th>
-                            @Html.DisplayNameFor(model => model.FullAddress)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.PhoneNumber)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.IsActive)
-                        </th>
-
-                        <th>
-                            @Html.DisplayNameFor(model => model.Image)
-                        </th>
-                        <th></th>
+                        <th>@Html.DisplayNameFor(model => model.First().FullName)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().AdminName)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().RoleName)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().FullAddress)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().PhoneNumber)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().IsActive)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().Image)</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach (var item in Model)
                     {
                         <tr>
+                            <td>@item.FullName</td>
+                            <td>@item.AdminName</td>
+                            <td>@item.RoleName</td>
+                            <td>@item.FullAddress</td>
+                            <td>@item.PhoneNumber</td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.FullName)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.AdminName)
-                            </td>
-
-                            <td>
-                                @Html.DisplayFor(modelItem => item.RoleName)
-                            </td>
-
-
-
-                            <td>
-                                @Html.DisplayFor(modelItem => item.FullAddress)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.PhoneNumber)
-                            </td>
-
-                            <td>
-                                @Html.DisplayFor(modelItem => item.IsActive)
+                                @if ((bool)item.IsActive)
+                                {
+                                    <span class="badge bg-success">Active</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-secondary">Inactive</span>
+                                }
                             </td>
                             <td>
                                 @if (item.Image != null)
                                 {
-                                    <img src="data:image/jpg;base64,@Convert.ToBase64String(item.Image)" style="height:150px; width:200px;border-radius:50%" />
+                                    <img src="data:image/jpg;base64,@Convert.ToBase64String(item.Image)" style="height: 80px; width: 80px; border-radius: 50%;" />
                                 }
-
                             </td>
                             <td>
-                                <a asp-action="Add_Edit" class="btn btn-warning my-3" title="Edit" asp-route-id=@item.AdminId><i class="fa-regular fa-pen-to-square"></i></a>
-                                @if ((bool)item.IsActive)
-                                {
-                                <a asp-action="Delete" class="btn btn-danger my-3" title="Activate/Deactivate" asp-route-id=@item.AdminId>
+                                <a asp-action="Add_Edit" asp-route-id="@item.AdminId" class="btn btn-sm btn-warning my-1" title="Edit">
+                                    <i class="fa-regular fa-pen-to-square"></i>
+                                </a>
 
-                                        <i class="fa-solid fa-trash"></i>
-                                    </a>
-                                    }
-                                    else
-                                    {
-                                        <a asp-action="Delete" class="btn btn-success my-3" title="Activate/Deactivate" asp-route-id=@item.AdminId>
-                                        <i class="fa-solid fa-check-double"></i>
-                                    </a>
-                                    }
-                                
+                                <a asp-action="Delete" asp-route-id="@item.AdminId" 
+                                   class="btn btn-sm @((bool)item.IsActive ? "btn-danger" : "btn-success") my-1" 
+                                   title="@((bool)item.IsActive ? "Deactivate" : "Activate")">
+                                    <i class="fa-solid @((bool)item.IsActive ? "fa-trash" : "fa-check-double")"></i>
+                                </a>
                             </td>
                         </tr>
                     }
@@ -125,4 +90,3 @@
         </div>
     </div>
 </div>
-

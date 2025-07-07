@@ -1,0 +1,226 @@
+﻿/* === Base Reset === */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+    color: #1a1a1a;
+}
+
+/* === Links === */
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+    a:hover {
+        color: #FF9933;
+    }
+
+/* === Layout Wrapper === */
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+/* === Sidebar === */
+.sideBar, #mySidebar {
+    width: 300px;
+    background-color: #fff;
+    border-right: 1px solid #eee;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    overflow-y: auto;
+    transition: left 0.3s ease-in-out;
+}
+
+    .sideBar.hidden, #mySidebar.hidden {
+        left: -300px;
+    }
+
+/* === Admin Body Content === */
+.adminBody {
+    margin-left: 300px;
+    width: calc(100% - 300px);
+    transition: all 0.3s ease-in-out;
+}
+
+    .adminBody.full-width {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+
+/* === Profile Section === */
+.profile {
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+    .profile img {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #FF9933;
+    }
+
+.profileName {
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.profileDesc {
+    font-size: 14px;
+    color: #888;
+}
+
+/* === Sidebar Menu === */
+.sidebarList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebarItem {
+    padding: 15px 25px;
+    border-bottom: 1px solid #f3f3f3;
+    transition: background-color 0.2s ease-in-out;
+}
+
+    .sidebarItem:hover {
+        background-color: #FFF4E6;
+    }
+
+    .sidebarItem a {
+        display: flex;
+        align-items: center;
+        color: #1a1a1a;
+        font-weight: 500;
+    }
+
+    .sidebarItem i {
+        margin-right: 10px;
+        color: #FF9933;
+    }
+
+/* === Navbar === */
+.navbar {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 30px;
+    border-radius: 0 0 10px 10px;
+}
+
+.navbar-brand {
+    color: #FF9933 !important;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.navbar .nav-link {
+    color: black !important;
+    font-weight: 500;
+}
+
+    .navbar .nav-link:hover {
+        color: #FF9933 !important;
+    }
+
+.navbar .dropdown-menu {
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item:hover {
+    background-color: #FFF4E6;
+    color: #FF9933 !important;
+}
+
+/* === Modal === */
+.modal-header,
+.modal-footer {
+    border-color: #f0f0f0;
+}
+
+.modal-title {
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.modal-footer .btn-danger {
+    background-color: #FF9933;
+    border: none;
+}
+
+    .modal-footer .btn-danger:hover {
+        background-color: #e57c00;
+    }
+
+/* === Sidebar Toggle Button === */
+#btnSide {
+    background-color: #FF9933;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+    #btnSide:hover {
+        background-color: #e57c00;
+    }
+
+/* === Charts and Cards === */
+.chart-box {
+    height: 200px;
+    background-color: #fafafa;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+    .chart-box.tall {
+        height: 250px;
+    }
+
+    .chart-box:hover {
+        background-color: #fff4e6;
+        box-shadow: inset 0 0 10px rgba(255, 153, 51, 0.05);
+    }
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.card h6 {
+    letter-spacing: 0.5px;
+}
+
+.card h3 {
+    font-size: 1.75rem;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+    .sideBar, #mySidebar {
+        left: -300px;
+    }
+
+    .adminBody {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .navbar-brand {
+        font-size: 20px;
+    }
+}

@@ -73,7 +73,7 @@ namespace BLL.Implementation
                     ProcessedBy_Name=x.ProcessedByNavigation.FullName
                    
                 }).OrderBy(x=>x.OrderId).Skip((currentPage-1)*maxRows).Take(maxRows).ToList();
-                double pageCount = (double)((decimal)_context.TblOrders.Count()/Convert.ToDecimal(maxRows));
+                double pageCount = (double)((decimal)_context.TblOrders.Where(x => x.OrderStatus != "Cancelled" && x.OrderStatus != "Delivered").Count()/Convert.ToDecimal(maxRows));
                 _model.PageCount=(int)Math.Ceiling(pageCount);
                 _model.CurrentPageIndex = currentPage;
                 return _model;

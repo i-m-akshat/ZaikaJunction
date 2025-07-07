@@ -1,68 +1,106 @@
 ﻿@model IEnumerable<Models.Role>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Role Management";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-<script type="text/javascript">
-    var mainID;
+    <script type="text/javascript">
+        let openModal = (itemID) => {
+            document.getElementById('itemID').value = itemID;
+            $('#staticBackdrop').modal('show');
+        }
 
-    let openModal = (itemID) => {
-        var txtBox = document.getElementById('itemID');
-        txtBox.value = itemID;
-        $('#staticBackdrop').modal('show');
-    }
-    let deleteItem = () => {
-        var itemID = $('#itemID').val();
-        $.ajax({
-            url: 'Role/Delete?id=' + itemID,
-            type: 'POST',
-            success: function (result) {
-                $('#staticBackdrop').modal('hide');
-                window.location.reload();
-            },
-            error: function (error) {
-                console.log(error);
-            }
-        })
-    }
-</script>
-<div class="row justify-content-center align-items-center mt-4">
-    <h1 class="row-header text-center">List Of All Roles</h1>
-    <div class="card col-md-12 col-lg-12 px-2 py-2" style="border-radius:0">
-        <div class="card-body px-2">
-            <a class="btn btn-sm btn-outline-dark btn-light" role="button" asp-action="Add_Edit">Add New Role</a>
-            <table class="table table-responsive table-hover table-striped table-bordered">
-                <thead>
-                    <tr>
-                        <th>
-                            @Html.DisplayNameFor(model => model.RoleId)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Roles)
-                        </th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model)
-                    {
+        let deleteItem = () => {
+            var itemID = $('#itemID').val();
+            $.ajax({
+                url: 'Role/Delete?id=' + itemID,
+                type: 'POST',
+                success: function () {
+                    $('#staticBackdrop').modal('hide');
+                    window.location.reload();
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+    </script>
+
+
+<div class="container mt-5">
+    <!-- Header -->
+    <div class="text-center mb-4">
+        <h2 class="fw-bold text-warning"><i class="fa-solid fa-user-shield me-2"></i>Role Management</h2>
+        <hr class="w-25 mx-auto" />
+    </div>
+
+    <!-- Card -->
+    <div class="card shadow border-0 rounded-4">
+        <div class="card-body p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+             @*    <h5 class="mb-0 fw-semibold">List of All Roles</h5> *@
+                <a class="btn btn-outline-warning" asp-action="Add_Edit">
+                    <i class="fa fa-plus me-1"></i> Add New Role
+                </a>
+            </div>
+
+            <!-- Table -->
+            <div class="table-responsive">
+                <table class="table table-striped table-hover table-bordered align-middle text-center">
+                    <thead class="table-warning text-dark">
                         <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.RoleId)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Roles)
-                            </td>
-                            <td>
-                                <a asp-action="Add_Edit" class="btn btn-sm btn-warning" asp-route-id=@item.RoleId><i class="fa-regular fa-pen-to-square"></i></a>
-                                <a id="btnShowDelete" class="btn btn-sm btn-danger" role="button" onclick="openModal ('@item.RoleId')"><i class="fa-solid fa-trash"></i></a>
-                            </td>
+                            <th>@Html.DisplayNameFor(model => model.First().RoleId)</th>
+                            <th>@Html.DisplayNameFor(model => model.First().Roles)</th>
+                            <th>Actions</th>
                         </tr>
-                    }
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.RoleId</td>
+                                <td>@item.Roles</td>
+                                <td>
+                                    <a asp-action="Add_Edit" asp-route-id="@item.RoleId" class="btn btn-sm btn-warning me-1" title="Edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </a>
+                                    <button type="button" class="btn btn-sm btn-danger" onclick="openModal('@item.RoleId')" title="Delete">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 
+<!-- Delete Confirmation Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 border-0 shadow-lg">
+            <div class="modal-header bg-warning text-dark rounded-top-4">
+                <h5 class="modal-title fw-bold">
+                    <i class="fa-solid fa-triangle-exclamation me-2"></i>Confirm Deletion
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center py-4 px-4">
+                <p class="fs-5 fw-semibold text-danger mb-3">This action is irreversible!</p>
+                <p class="mb-3">You are about to permanently delete a role.<br /><strong>This cannot be undone.</strong></p>
+                <p class="text-muted small mb-4">Please confirm you want to proceed.</p>
+                <input type="hidden" id="itemID" />
+            </div>
+            <div class="modal-footer justify-content-center border-0 pb-4">
+                <button type="button" class="btn btn-outline-secondary px-4" data-bs-dismiss="modal">
+                    <i class="fa-solid fa-xmark me-1"></i> Cancel
+                </button>
+                <button type="button" class="btn btn-danger px-4" onclick="deleteItem()">
+                    <i class="fa-solid fa-trash-can me-1"></i> Delete
+                </button>
+            </div>
         </div>
     </div>
 </div>

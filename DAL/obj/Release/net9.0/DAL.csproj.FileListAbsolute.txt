@@ -1,0 +1,15 @@
+A:\OnlineFoodApplication\Online_Food_Application\DAL\bin\Release\net9.0\DAL.deps.json
+A:\OnlineFoodApplication\Online_Food_Application\DAL\bin\Release\net9.0\DAL.runtimeconfig.json
+A:\OnlineFoodApplication\Online_Food_Application\DAL\bin\Release\net9.0\DAL.dll
+A:\OnlineFoodApplication\Online_Food_Application\DAL\bin\Release\net9.0\DAL.pdb
+A:\OnlineFoodApplication\Online_Food_Application\DAL\obj\Release\net9.0\DAL.csproj.AssemblyReference.cache
+A:\OnlineFoodApplication\Online_Food_Application\DAL\obj\Release\net9.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+A:\OnlineFoodApplication\Online_Food_Application\DAL\obj\Release\net9.0\DAL.AssemblyInfoInputs.cache
+A:\OnlineFoodApplication\Online_Food_Application\DAL\obj\Release\net9.0\DAL.AssemblyInfo.cs
+A:\OnlineFoodApplication\Online_Food_Application\DAL\obj\Release\net9.0\DAL.csproj.CoreCompileInputs.cache
+A:\OnlineFoodApplication\Online_Food_Application\DAL\obj\Release\net9.0\DAL.sourcelink.json
+A:\OnlineFoodApplication\Online_Food_Application\DAL\obj\Release\net9.0\DAL.dll
+A:\OnlineFoodApplication\Online_Food_Application\DAL\obj\Release\net9.0\refint\DAL.dll
+A:\OnlineFoodApplication\Online_Food_Application\DAL\obj\Release\net9.0\DAL.pdb
+A:\OnlineFoodApplication\Online_Food_Application\DAL\obj\Release\net9.0\DAL.genruntimeconfig.cache
+A:\OnlineFoodApplication\Online_Food_Application\DAL\obj\Release\net9.0\ref\DAL.dll

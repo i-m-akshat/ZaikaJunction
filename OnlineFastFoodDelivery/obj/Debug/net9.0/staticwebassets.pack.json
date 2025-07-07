@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\OnlineFastFoodDelivery.64ephog2jj.bundle.scp.css"
     },
     {
+      "Id": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\wwwroot\\css\\admin.css",
+      "PackagePath": "staticwebassets\\css\\admin.css"
+    },
+    {
       "Id": "A:\\OnlineFoodApplication\\Online_Food_Application\\OnlineFastFoodDelivery\\wwwroot\\css\\index.css",
       "PackagePath": "staticwebassets\\css\\index.css"
     },

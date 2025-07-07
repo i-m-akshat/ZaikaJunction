@@ -2,6 +2,7 @@
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.ChatCompletion;
 using Models;
+using System.Text.Json;
 
 namespace OnlineFastFoodDelivery.Controllers
 {
@@ -9,15 +10,23 @@ namespace OnlineFastFoodDelivery.Controllers
     {
         private readonly Kernel _kernel;
         private readonly IChatCompletionService _chatService;
-        private readonly ChatHistory chatHistory;
+
+        private const string SessionKey = "ChatHistory";
+
         public ChatbotController(Kernel kernel)
         {
             _kernel = kernel;
-            _chatService=kernel.GetRequiredService<IChatCompletionService>();
-            chatHistory = new ChatHistory();
-            var defaultMessage = @"It looks like you want to refine the AI assistant's introductory behavior. Here's a revised prompt that ensures the introduction happens only once per session or chat history, rather than at the start of every new conversation:
+            _chatService = kernel.GetRequiredService<IChatCompletionService>();
+        }
 
-```
+        private ChatHistory GetChatHistory()
+        {
+            var json = HttpContext.Session.GetString(SessionKey);
+            if (string.IsNullOrEmpty(json))
+            {
+                var history = new ChatHistory();
+
+                var systemPrompt = @"
 You are an AI assistant integrated into the Zaika Junction food delivery application.
 
 Your role is to provide friendly and helpful support to users related to food, delivery, ordering, or general queries.
@@ -32,36 +41,56 @@ Your role is to provide friendly and helpful support to users related to food, d
 Only mention that you were integrated by Akshat Dwivedi if the user explicitly asks about your developer or integration.
 
 Keep your tone helpful, conversational, and aligned with a digital assistant for a food service platform.
-```
 ";
-            //var chatHistory = new ChatHistory();
-            chatHistory.AddUserMessage(defaultMessage);
+                history.AddUserMessage(systemPrompt);
+                SaveChatHistory(history);
+                return history;
+            }
+
+            return JsonSerializer.Deserialize<ChatHistory>(json) ?? new ChatHistory();
         }
+
+        private void SaveChatHistory(ChatHistory history)
+        {
+            var json = JsonSerializer.Serialize(history);
+            HttpContext.Session.SetString(SessionKey, json);
+        }
+
         public async Task<IActionResult> Index()
         {
-           
-            var response=await _chatService.GetChatMessageContentsAsync(chatHistory);
-            var reply = response.FirstOrDefault()?.Content?.ToString()??"";
+            var chatHistory = GetChatHistory();
+
+            var response = await _chatService.GetChatMessageContentsAsync(chatHistory);
+            var reply = response.FirstOrDefault()?.Content ?? "";
+
             chatHistory.AddAssistantMessage(reply);
+            SaveChatHistory(chatHistory);
+
             var viewModel = new ChatViewModel();
             viewModel.Messages.Add(("AI", reply));
             return View(viewModel);
         }
+
         [HttpPost]
-        public IActionResult Ask([FromBody]string question)
+        public async Task<IActionResult> Ask([FromBody] string question)
         {
             try
             {
-              chatHistory.AddUserMessage(question);
-                var response = _chatService.GetChatMessageContentsAsync(chatHistory).Result;
-                var reply = response.FirstOrDefault()?.Content?.ToString() ?? "";
+                var chatHistory = GetChatHistory();
+
+                chatHistory.AddUserMessage(question);
+                var response = await _chatService.GetChatMessageContentsAsync(chatHistory);
+                var reply = response.FirstOrDefault()?.Content ?? "";
+
                 chatHistory.AddAssistantMessage(reply);
+                SaveChatHistory(chatHistory);
+
                 return Json(new { sender = "AI", message = reply });
             }
             catch (Exception ex)
             {
-
-                throw;
+                // Log the error
+                return Json(new { sender = "AI", message = "Oops! Something went wrong. Please try again later." });
             }
         }
     }
