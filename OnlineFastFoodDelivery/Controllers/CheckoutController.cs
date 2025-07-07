@@ -174,29 +174,58 @@ namespace OnlineFastFoodDelivery.Controllers
             }
             
         }
-        public async Task<bool> SendEmailNotifications_OrderPlaced( string EmailID,int OrderID,string transactionID,string OrderStatus)
+        public async Task<bool> SendEmailNotifications_OrderPlaced(string EmailID, int OrderID, string transactionID, string OrderStatus)
         {
-           
             bool isSuccess = false;
-            Email emailMessage = new Email();
-            emailMessage.ToEmail = EmailID;
-            emailMessage.Subject = string.Format("RE: Order Placed");
-            emailMessage.Body = string.Format("Congratulations !,<br/><br/> Your order has been placed successfully, <h2>OrderDetails</h2><br/>" +
-                " <b>Order Number</b>-{0}.<br/>" +
-                 " <b>Transaction ID</b>-{1}.<br/>" +
-                  " <b>Order Status</b>-{2}.<br/>" +
-                "<hr/>Thank you for shopping with us! We appreciate your business<br/>If you have any questions or need further assistance, feel free to contact our customer support at @i.m.akshat.dwivedi@gmai.com.\r\n\r\nHave a great day!", OrderID,transactionID,OrderStatus);
+
+            // Get your logo from the root (e.g., wwwroot/img/logo.png)
+            //string logoUrl = $"{Request.Scheme}://{Request.Host}/img/Logo.png";
+            //string logoPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Logo.png");
+            //byte[] imageBytes = System.IO.File.ReadAllBytes(logoPath);
+            //string base64Image = Convert.ToBase64String(imageBytes);
+            //string logoUrl = $"data:image/png;base64,{base64Image}";
+            string logoUrl = $"https://localhost:7016//img/Logo.png";
+
+
+
+            Email emailMessage = new Email
+            {
+                ToEmail = EmailID,
+                Subject = "🧾 Order Confirmation – Zaika Junction",
+
+                Body = $@"
+        <div style='font-family:Segoe UI, sans-serif; background-color:#ffffff; padding:25px; border-radius:10px; border:2px solid #f1c40f; color:#000; max-width:600px; margin:auto;'>
+
+            <div style='text-align:center; margin-bottom:20px;'>
+                <img src='{logoUrl}' alt='Zaika Logo' style='max-width:150px; height:auto;' />
+            </div>
+
+            <h2 style='color:#111; text-align:center;'>🎉 Congratulations!</h2>
+            <p style='font-size:16px; text-align:center;'>Your order has been placed successfully at <strong>Zaika Junction</strong>.</p>
+
+            <div style='background-color:#fef9e7; padding:20px; border-radius:8px; margin-top:20px;'>
+                <h3 style='color:#f1c40f;'>📦 Order Details:</h3>
+                <p><strong>Order Number:</strong> #{OrderID}</p>
+                <p><strong>Transaction ID:</strong> {transactionID}</p>
+                <p><strong>Order Status:</strong> <span style='color:green;'>{OrderStatus}</span></p>
+            </div>
+
+            <p style='font-size:15px; margin-top:20px;'>
+                Thank you for shopping with us! We appreciate your business. 🍽️
+                <br /><br />
+                If you have any questions or need further assistance, feel free to contact our customer support at 
+                <a href='mailto:i.m.akshat.dwivedi@gmail.com' style='color:#f1c40f;'>i.m.akshat.dwivedi@gmail.com</a>.
+            </p>
+
+            <hr style='margin:30px 0; border:none; border-top:1px solid #eee;' />
+
+            <p style='font-size:13px; text-align:center; color:#888;'>Sent on {DateTime.Now:dddd, MMMM d, yyyy - hh:mm tt}</p>
+        </div>"
+            };
+
             isSuccess = await mailService.SendMailAsync(emailMessage);
-            if (isSuccess)
-            {
-
-                return true;
-
-            }
-            else
-            {
-                return false;
-            }
+            return isSuccess;
         }
+
     }
 }

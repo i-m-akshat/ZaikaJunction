@@ -119,13 +119,24 @@
         </div>
     </footer>
 
-   
+
 
     @if (TempData["Success"] != null)
     {
         <script type="text/javascript">
             window.onload = function () {
-                swal("Success!", '@TempData["Success"]', "success");
+                swal({
+                    title: "✅ Success!",
+                    text: "@TempData["Success"]",
+                    icon: "success",
+                    buttons: {
+                        confirm: {
+                            text: "Okay, Got It!",
+                            className: "btn btn-success px-4 py-2 rounded-pill"
+                        }
+                    },
+                    timer: 3500
+                });
             };
         </script>
     }
@@ -133,10 +144,28 @@
     {
         <script type="text/javascript">
             window.onload = function () {
-                swal("Failed! Please try again", '@TempData["Error"]', "error");
+                swal({
+                    title: "⚠️ Something Went Wrong!",
+                    text: "@TempData["Error"]",
+                    icon: "error",
+                    buttons: {
+                        cancel: {
+                            text: "Dismiss",
+                            visible: true,
+                            className: "btn btn-outline-secondary px-3 py-2 rounded-pill"
+                        },
+                        confirm: {
+                            text: "Retry",
+                            className: "btn btn-danger px-4 py-2 rounded-pill"
+                        }
+                    },
+                    dangerMode: true
+                });
             };
         </script>
     }
+
+
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-logo {
-    height: 80px; /* Slightly bigger */
+    height: 60px; /* Slightly bigger */
     width: auto; /* Maintain aspect ratio */
     display: inline-block;
     vertical-align: middle;
@@ -179,7 +179,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .section-padding {
-    padding: 6rem 0; /* More padding for sections */
+    padding: 4rem 0; /* More padding for sections */
 }
 
 .section-title {

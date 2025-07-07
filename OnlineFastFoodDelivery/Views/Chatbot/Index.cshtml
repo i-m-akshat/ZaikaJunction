@@ -1,0 +1,258 @@
+﻿@using Models;
+@model ChatViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .chatContainer {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+        font-family: 'Segoe UI', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .chat-card {
+        width: 100%;
+        max-width: 1000px;
+        height: 90vh;
+        background: linear-gradient(145deg, #ffffffdd, #f0f4ffcc);
+        backdrop-filter: blur(8px);
+        border-radius: 1.5rem;
+        padding: 2rem;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .chat-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .app-logo {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        object-fit: contain;
+        margin-right: 0.75rem;
+    }
+
+    .chat-title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #333;
+    }
+
+    .user-badge {
+        background-color: #ffffff88;
+        padding: 0.5rem 1rem;
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+    }
+
+        .user-badge img {
+            width: 32px;
+            height: 32px;
+            margin-right: 0.5rem;
+            border-radius: 50%;
+        }
+
+    .chat-body {
+        flex-grow: 1;
+        overflow-y: auto;
+        padding-right: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .chat-message {
+        display: flex;
+        margin-bottom: 1rem;
+        align-items: flex-start;
+    }
+
+        .chat-message.ai {
+            flex-direction: row;
+        }
+
+        .chat-message.user {
+            flex-direction: row-reverse;
+        }
+
+    .message-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .chat-message.ai .message-icon {
+        margin-right: 0.75rem;
+    }
+
+    .chat-message.user .message-icon {
+        margin-left: 0.75rem;
+    }
+
+    .message-content {
+        max-width: 80%;
+        padding: 1rem;
+        border-radius: 1rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+        .message-content.ai {
+            background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+            color: #222;
+        }
+
+        .message-content.user {
+            background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+            color: #222;
+        }
+
+    .chat-footer {
+        position: relative;
+    }
+
+        .chat-footer input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: 999px;
+            border: none;
+            background-color: #ffffffcc;
+            color: #333;
+            outline: none;
+            font-size: 1rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+            .chat-footer input::placeholder {
+                color: #777;
+            }
+
+    .send-button {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: #666;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+
+        .send-button:hover {
+            color: #000;
+        }
+
+    /* Scrollbar */
+    .chat-body::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .chat-body::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 3px;
+    }
+
+        .chat-body::-webkit-scrollbar-thumb:hover {
+            background: #999;
+        }
+</style>
+    <div class="chatContainer">
+        <div class="chat-card">
+            <!-- Header -->
+            <div class="chat-header">
+                <div style="display: flex; align-items: center;">
+                    <img src="~/img/Logo.png" alt="App Logo" class="app-logo" />
+                    <div class="chat-title">Zaika Junction Assistant</div>
+                </div>
+                <div class="user-badge">
+                    <img src="https://placehold.co/32x32/f0f0f0/000?text=U" alt="User" />
+                    <span style="color:#444;">Akshat Dwivedi</span>
+                </div>
+            </div>
+
+            <!-- Chat Body -->
+            <div class="chat-body">
+                @foreach (var message in Model.Messages)
+                {
+                    var isUser = message.Item1 == "User";
+                    <div class="chat-message @(isUser ? "user" : "ai")">
+                        <img src="@(isUser ? "https://placehold.co/32x32/a6c1ee/ffffff?text=U" : Url.Content("~/img/Logo.png"))" alt="@(message.Item1) Icon" class="message-icon" />
+                        <div class="message-content @(isUser ? "user" : "ai")">
+                            @message.Item2
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <!-- Footer -->
+            <div class="chat-footer">
+                <input type="text" id="userInput" placeholder="Type your message..." />
+                <button class="send-button" id="sendBtn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    @section Scripts {
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                const input = $('#userInput');
+                const chatBody = $('.chat-body');
+
+                $('#sendBtn').on('click', sendMessage);
+                input.on('keypress', function (e) {
+                    if (e.which === 13) sendMessage();
+                });
+
+                function appendMessage(role, text) {
+                    const isUser = role === 'User';
+                    const message = `
+                        <div class="chat-message ${isUser ? 'user' : 'ai'}">
+                            <img src="${isUser ? 'https://placehold.co/32x32/a6c1ee/ffffff?text=U' : '/img/Logo.png'}" alt="${role} Icon" class="message-icon" />
+                            <div class="message-content ${isUser ? 'user' : 'ai'}">${text}</div>
+                        </div>`;
+                    chatBody.append(message);
+                    chatBody.scrollTop(chatBody.prop("scrollHeight"));
+                }
+
+                function sendMessage() {
+                    const question = input.val().trim();
+
+                    console.log(question);
+                    if (!question) return;
+
+                    appendMessage('User', question);
+                    input.val('');
+
+                    $.ajax({
+                        type: 'POST',
+                        url: '/Chatbot/Ask',
+                        contentType: 'application/json',
+                        data: JSON.stringify(question),
+                        success: function (response) {
+                            appendMessage('AI', response.message);
+                        },
+                        error: function () {
+                            appendMessage('AI', "Sorry, something went wrong.");
+                        }
+                    });
+                }
+            });
+        </script>
+    }
+

@@ -4,6 +4,7 @@ using Stripe;
 using Models;
 using BLL.Interfaces;
 using BLL.Implementation;
+using Microsoft.SemanticKernel;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -11,6 +12,21 @@ builder.Services.AddControllersWithViews();
 //builder.Services.AddMvc().AddControllersAsServices();
 builder.Services.AddSession();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();//registering the context accessor 
+
+string geminiApiKey = "AIzaSyAJoKl9k5swrpVpxarkTeEnrAXYFJ-zslk";
+builder.Services.AddSingleton(provider =>
+{
+    var builder = Kernel.CreateBuilder();
+
+#pragma warning disable SKEXP0070 
+    builder.AddGoogleAIGeminiChatCompletion(modelId: "gemini-2.5-flash",
+    apiKey: geminiApiKey);
+#pragma warning restore SKEXP0070 
+
+    var kernel = builder.Build();
+    return kernel;
+});
+
 //email Configuration
 var emailConfig = builder.Configuration.GetSection("MailSettings").Get<MailSettings>();
 builder.Services.AddSingleton(emailConfig);

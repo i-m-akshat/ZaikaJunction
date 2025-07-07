@@ -170,26 +170,40 @@ namespace OnlineFastFoodDelivery.Controllers
             }
             return RedirectToAction("Index");
         }
-        public async Task<bool> SendEmailNotifications(string Message, string EmailID)
+        public async Task<bool> SendEmailNotifications(string message, string emailID)
         {
             bool isSuccess = false;
-            Email emailMessage = new Email();
-            emailMessage.ToEmail = EmailID;
-            emailMessage.Subject = string.Format("RE: Order Status Changed");
-            emailMessage.Body = string.Format("Hey User!,<br/><br/> Your Order Status has been changed, Your order  <b>{0}</b>.<br/><br/><hr/>Thank Your For Ordering with Us", Message);
-            isSuccess= await mailService.SendMailAsync(emailMessage);
-            if (isSuccess)
+
+            // Dynamically build the absolute logo URL
+            string logoUrl = $"{Request.Scheme}://{Request.Host}/img/logo.png";
+
+            Email emailMessage = new Email
             {
+                ToEmail = emailID,
+                Subject = "📦 RE: Order Status Changed",
+                Body = $@"
+            <div style='font-family:Segoe UI, sans-serif; background-color:#ffffff; padding:20px; border-radius:10px; color:#000; max-width:600px; margin:auto; border:1px solid #f1c40f;'>
+                <div style='text-align:center; margin-bottom:20px;'>
+                    <img src='{logoUrl}' alt='Zaika Logo' style='max-width:150px; height:auto;' />
+                </div>
+                <h2 style='color:#111;'>👋 Hello Zaika User,</h2>
+                <p style='font-size:16px;'>We wanted to inform you that your order status has been updated:</p>
+                
+                <div style='background-color:#f1c40f; padding:15px; border-radius:8px; font-size:18px; font-weight:bold; color:#000; text-align:center;'>
+                    {message}
+                </div>
 
-                return true;
+                <p style='font-size:16px; margin-top:20px;'>Thank you for ordering with us. 🍽️</p>
+                <hr style='margin:30px 0; border:none; border-top:1px solid #eee;' />
+                <p style='font-size:14px; color:#888;'>This is an automated message from <strong>Zaika Junction</strong>. If you have questions, please contact our support.</p>
+                <p style='font-size:13px; color:#aaa;'>Sent on: <b>{DateTime.Now:dddd, MMMM d, yyyy - hh:mm tt}</b></p>
+            </div>"
+            };
 
-            }
-            else
-            {
-
-                return false;
-            }
+            isSuccess = await mailService.SendMailAsync(emailMessage);
+            return isSuccess;
         }
-        
+
+
     }
 }

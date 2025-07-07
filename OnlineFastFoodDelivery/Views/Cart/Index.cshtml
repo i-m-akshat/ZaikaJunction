@@ -7,90 +7,97 @@
 
 <div class="container py-5">
     <h2 class="mb-5 text-center text-dark fw-bold">Your Shopping Cart</h2>
-
-    <div class="row g-4">
-        <!-- Cart Items Section -->
-        <div class="col-lg-8">
-            <div class="d-flex flex-column gap-3">
-                @if (!Model.Any())
-                {
-                    <div class="text-center">
-                        <img src="~/images/1ae8bcdcef865fe7a50e34148c8cb1ce.jpg" class="img-fluid" style="max-width: 300px; height: 250px;" />
-                        <h4 class="text-muted mt-3">Bhai! Kuch to Add Kr Le</h4>
-                    </div>
-                }
-                else
-                {
-                    foreach (var item in Model)
-                    {
-                        var totalItemPrice = item.TotalFoodPrice;
-                        subTotal += totalItemPrice;
-                        <div class="p-3 bg-white shadow-sm card rounded-3">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                    <img src="data:image/png;base64,@Convert.ToBase64String(item.BannerImage)" class="img-fluid rounded-3" style="width: 100px; height: 100px; object-fit: cover;" alt="@item.FoodName" />
-                                </div>
-                                <div class="col">
-                                    <h5 class="mb-1 text-warning fw-bold">@item.FoodName</h5>
-                                    <p class="mb-2 text-secondary small">Available: @item.Stock</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="input-group me-3" style="width: auto;">
-                                            @if (item.Quantity > 1)
-                                            {
-                                                <a asp-controller="Cart" asp-action="DecreaseQuantity" asp-route-FoodID="@item.FoodId" class="p-2 border btn btn-light rounded-start-3 fw-bold"><i class="fa-solid fa-minus"></i></a>
-                                            }
-                                            <input type="text" class="p-2 text-center border form-control fw-bold fs-6 text-dark" readonly style="width: 50px;" value="@item.Quantity" />
-                                            @if (item.Quantity + 1 <= item.Stock)
-                                            {
-                                                <a asp-controller="Cart" asp-action="IncreaseQuantity" asp-route-FoodID="@item.FoodId" class="p-2 border btn btn-light rounded-end-3 fw-bold"><i class="fa-solid fa-plus"></i></a>
-                                            }
-                                        </div>
-                                        <span class="text-success fw-bold fs-5">₹@item.FoodAmount</span>
-                                    </div>
-                                    <p class="mt-1 text-muted">Total: ₹@Decimal.Round(totalItemPrice, 2)</p>
-                                </div>
-                                <div class="col-auto text-end">
-                                    <a asp-controller="Cart" asp-action="RemoveItem" asp-route-ItemID="@item.FoodId" class="btn btn-outline-danger btn-sm rounded-circle" title="Remove Item"><i class="fa-solid fa-trash"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    }
-                }
-            </div>
-        </div>
-
-        <!-- Cart Summary Section -->
-        @if (Model.Any())
-        {
-            var deliveryFee = 50m; // You can change this as needed
-            var tax = Decimal.Round(subTotal * 0.05m, 2);
-            var grandTotal = subTotal + deliveryFee + tax;
-
-            <div class="col-lg-4">
-                <div class="p-4 bg-white shadow-sm card rounded-3">
-                    <h4 class="pb-2 mb-4 text-dark fw-bold border-bottom">Order Summary</h4>
-                    <div class="py-2 d-flex justify-content-between text-secondary">
-                        <span>Subtotal:</span>
-                        <span>₹@Decimal.Round(subTotal, 2)</span>
-                    </div>
-                    <div class="py-2 d-flex justify-content-between text-secondary">
-                        <span>Delivery Fee:</span>
-                        <span>₹@deliveryFee</span>
-                    </div>
-                    <div class="py-2 pb-3 mb-3 d-flex justify-content-between text-secondary border-bottom">
-                        <span>Tax (5%):</span>
-                        <span>₹@tax</span>
-                    </div>
-                    <div class="py-2 d-flex justify-content-between">
-                        <span class="text-warning fw-bold fs-4">Total:</span>
-                        <span class="text-warning fw-bold fs-4">₹@Decimal.Round(grandTotal, 2)</span>
-                    </div>
-                    <div class="gap-2 mt-4 d-grid">
-                        <a asp-controller="Checkout" asp-action="Checkout" class="py-3 shadow-sm btn btn-warning fw-bold rounded-pill">Proceed to Checkout</a>
-                        <a asp-controller="Home" asp-action="Index" class="py-3 btn btn-outline-secondary fw-bold rounded-pill">Continue Shopping</a>
-                    </div>
+    @if (Model == null || !Model.Any())
+    {
+        <div class="container">
+            <div class="row justify-content-center align-items-center" style="min-height: 60vh;">
+                <div class="col-12 text-center">
+                    <img src="~/img/d.gif" class="img-fluid" style="max-width: 650px; height: auto;border-radius:5%" alt="Empty Cart" />
+                    <h4 class="text-muted mt-3">Oops! Your cart is feeling a little lonely 😅</h4>
+                    <p class="text-secondary">Start adding some delicious Zaika items to spice things up!</p>
+                    <a asp-controller="Foods" asp-action="index"  class="btn btn-primary mt-3">Browse Menu</a>
                 </div>
             </div>
-        }
-    </div>
+        </div>
+    }
+    else
+    {
+        <div class="row g-4">
+            <!-- Cart Items Section -->
+            <div class="col-lg-8">
+                <div class="d-flex flex-column gap-3">
+                    @foreach (var item in Model)
+                    {
+                    var totalItemPrice = item.TotalFoodPrice;
+                    subTotal += totalItemPrice;
+                    <div class="p-3 bg-white shadow-sm card rounded-3">
+                        <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                                <img src="data:image/png;base64,@Convert.ToBase64String(item.BannerImage)" class="img-fluid rounded-3" style="width: 100px; height: 100px; object-fit: cover;" alt="@item.FoodName" />
+                            </div>
+                            <div class="col">
+                                <h5 class="mb-1 text-warning fw-bold">@item.FoodName</h5>
+                                <p class="mb-2 text-secondary small">Available: @item.Stock</p>
+                                <div class="d-flex align-items-center">
+                                    <div class="input-group me-3" style="width: auto;">
+                                        @if (item.Quantity > 1)
+                                        {
+                                            <a asp-controller="Cart" asp-action="DecreaseQuantity" asp-route-FoodID="@item.FoodId" class="p-2 border btn btn-light rounded-start-3 fw-bold"><i class="fa-solid fa-minus"></i></a>
+                                        }
+                                        <input type="text" class="p-2 text-center border form-control fw-bold fs-6 text-dark" readonly style="width: 50px;" value="@item.Quantity" />
+                                        @if (item.Quantity + 1 <= item.Stock)
+                                        {
+                                            <a asp-controller="Cart" asp-action="IncreaseQuantity" asp-route-FoodID="@item.FoodId" class="p-2 border btn btn-light rounded-end-3 fw-bold"><i class="fa-solid fa-plus"></i></a>
+                                        }
+                                    </div>
+                                    <span class="text-success fw-bold fs-5">₹@item.FoodAmount</span>
+                                </div>
+                                <p class="mt-1 text-muted">Total: ₹@Decimal.Round(totalItemPrice, 2)</p>
+                            </div>
+                            <div class="col-auto text-end">
+                                <a asp-controller="Cart" asp-action="RemoveItem" asp-route-ItemID="@item.FoodId" class="btn btn-outline-danger btn-sm rounded-circle" title="Remove Item"><i class="fa-solid fa-trash"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    }
+
+                </div>
+            </div>
+
+            <!-- Cart Summary Section -->
+            @if (Model.Any())
+            {
+                var deliveryFee = 50m; // You can change this as needed
+                var tax = Decimal.Round(subTotal * 0.05m, 2);
+                var grandTotal = subTotal + deliveryFee + tax;
+
+                <div class="col-lg-4">
+                    <div class="p-4 bg-white shadow-sm card rounded-3">
+                        <h4 class="pb-2 mb-4 text-dark fw-bold border-bottom">Order Summary</h4>
+                        <div class="py-2 d-flex justify-content-between text-secondary">
+                            <span>Subtotal:</span>
+                            <span>₹@Decimal.Round(subTotal, 2)</span>
+                        </div>
+                        <div class="py-2 d-flex justify-content-between text-secondary">
+                            <span>Delivery Fee:</span>
+                            <span>₹@deliveryFee</span>
+                        </div>
+                        <div class="py-2 pb-3 mb-3 d-flex justify-content-between text-secondary border-bottom">
+                            <span>Tax (5%):</span>
+                            <span>₹@tax</span>
+                        </div>
+                        <div class="py-2 d-flex justify-content-between">
+                            <span class="text-warning fw-bold fs-4">Total:</span>
+                            <span class="text-warning fw-bold fs-4">₹@Decimal.Round(grandTotal, 2)</span>
+                        </div>
+                        <div class="gap-2 mt-4 d-grid">
+                            <a asp-controller="Checkout" asp-action="Checkout" class="py-3 shadow-sm btn btn-warning fw-bold rounded-pill">Proceed to Checkout</a>
+                            <a asp-controller="Home" asp-action="Index" class="py-3 btn btn-outline-secondary fw-bold rounded-pill">Continue Shopping</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    
 </div>

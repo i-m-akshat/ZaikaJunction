@@ -956,7 +956,6 @@ A:\OnlineFoodApplication\Online_Food_Application\OnlineFastFoodDelivery\wwwroot\
 A:\OnlineFoodApplication\Online_Food_Application\OnlineFastFoodDelivery\wwwroot\lib\fontawesome\svgs\solid\truck-arrow-right.svg
 A:\OnlineFoodApplication\Online_Food_Application\OnlineFastFoodDelivery\wwwroot\lib\fontawesome\svgs\solid\scissors.svg
 A:\OnlineFoodApplication\Online_Food_Application\OnlineFastFoodDelivery\wwwroot\lib\fontawesome\svgs\solid\arrow-up-9-1.svg
-A:\OnlineFoodApplication\Online_Food_Application\OnlineFastFoodDelivery\wwwroot\Images\322427_cart_icon.svg
 A:\OnlineFoodApplication\Online_Food_Application\OnlineFastFoodDelivery\wwwroot\lib\fontawesome\svgs\solid\fire-flame-simple.svg
 A:\OnlineFoodApplication\Online_Food_Application\OnlineFastFoodDelivery\wwwroot\lib\fontawesome\svgs\regular\circle-pause.svg
 A:\OnlineFoodApplication\Online_Food_Application\OnlineFastFoodDelivery\wwwroot\lib\fontawesome\svgs\solid\scroll.svg
@@ -2124,41 +2123,9 @@ wwwroot\css\index.css
 wwwroot\css\jquery-ui.min.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
-wwwroot\Images\[deleted by user].gif
-wwwroot\Images\1ae8bcdcef865fe7a50e34148c8cb1ce.jpg
-wwwroot\Images\322427_cart_icon.svg
-wwwroot\Images\65babfa10a37ee049e6b556f672103e5 (1).jpg
-wwwroot\Images\791390ef241edb6cc0b0ad7250056b89.jpg
-wwwroot\Images\AnasAbdin.gif
-wwwroot\Images\BannerMain.jpg
-wwwroot\Images\Burger vs_ Chopsticks.gif
-wwwroot\Images\chill (1).png
-wwwroot\Images\Day 5-6 Cat Tail Animation.gif
-wwwroot\Images\download.gif
-wwwroot\Images\Food delivery biker illustration.jpg
-wwwroot\Images\Food Loader - GIF Animation.gif
-wwwroot\Images\Gif Pack_ Food.gif
-wwwroot\Images\handpan.jpg
-wwwroot\Images\kindpng_1519867.png
-wwwroot\Images\kindpng_2679606.png
-wwwroot\Images\kindpng_3260136.png
-wwwroot\Images\kindpng_435380.png
-wwwroot\Images\Loading.gif
-wwwroot\Images\Menu.png
-wwwroot\Images\Mienar.gif
-wwwroot\Images\Ngan Pham Kitten GIF - Ngan Pham Kitten Anime - Discover & Share GIFs.gif
-wwwroot\Images\Nice Loading Animation For Websites » CSS Author.gif
-wwwroot\Images\persona3-mitsuru-kirij.gif
-wwwroot\Images\Plant.gif
-wwwroot\Images\Rotate.jpg
-wwwroot\Images\sakura.gif
-wwwroot\Images\Samosa-Resized.jpg
-wwwroot\Images\What Emoji Best Describes You_.gif
-wwwroot\Images\WideVarietyOfFoods.jpeg
-wwwroot\Images\Woolly & Shaggy - Gifs.gif
-wwwroot\Images\zero-two-dance.gif
 wwwroot\img\banner2.jpg
 wwwroot\img\bannerWhite.jpg
+wwwroot\img\d.gif
 wwwroot\img\DiverseMenu.png
 wwwroot\img\FastDelivery.png
 wwwroot\img\FreshSpices.jpeg
@@ -2172,8 +2139,6 @@ wwwroot\img\PremiumQuality.png
 wwwroot\img\Sign.jpg
 wwwroot\img\ZaikaJunctionEnlarge.png
 wwwroot\img\ZaikaJunctionWhiteEnlargeTrans.png
-wwwroot\indian.jpg
-wwwroot\indian-cuisine-spice-stock-photography-chili-pepper-seasoning-spices-for-recipe-png-b87eb3bbe793d730e4737f04b6fd5b9d.png
 wwwroot\js\apexcharts.js
 wwwroot\js\Chart.js
 wwwroot\js\jquery-ui.min.js
@@ -4341,7 +4306,3 @@ wwwroot\lib\jquery-validation\LICENSE.md
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
-wwwroot\Naomi-Sherman-Advanced-Graduate4.jpg
-wwwroot\undraw_breakfast_psiw.png
-wwwroot\undraw_Mobile_login_re_9ntv.png
-wwwroot\undraw_Tasting_re_3k5a.png
