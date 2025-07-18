@@ -289,23 +289,28 @@
                 success: function (data) {
                     // Handle the success response
                     console.log(data);
-                    // swal("Badhai ho!", 'Data aa gaya ', "success");
-                    $('#staticBackdrop_Forgot').modal('hide');
-                    $('#staticBackdrop_Loader').modal('show');
-                    $.ajax({
-                        url: '@Url.Content("~/Email/SendOTP?EMailID=")',
-                        method: 'POST',
-                        contentType: 'application/json',
-                        data: JSON.stringify(data.email),
-                        success: function (data) {
-                            $('#staticBackdrop_Loader').modal('hide');
-                            swal("OTP sent!", "Please Reset Your Password using the OTP", "success");
-                            $('#staticBackdrop_OTP').modal('show');
-                        },
-                        error: function (error) {
-                            swal("Error !", "Something went wrong", "error");
-                        }
-                    })
+                    if(data!=null){
+    
+                        $('#staticBackdrop_Forgot').modal('hide');
+                        $('#staticBackdrop_Loader').modal('show');
+                        $.ajax({
+                            url: '@Url.Content("~/Email/SendOTP?EMailID=")',
+                            method: 'POST',
+                            contentType: 'application/json',
+                            data: JSON.stringify(data.email),
+                            success: function (data) {
+                                $('#staticBackdrop_Loader').modal('hide');
+                                swal("OTP sent!", "Please Reset Your Password using the OTP", "success");
+                                $('#staticBackdrop_OTP').modal('show');
+                            },
+                            error: function (error) {
+                                swal("Error !", "Something went wrong", "error");
+                            }
+                        })
+                    }else{
+                        swal("Failed !", "User doesn't exist with this username", "error");
+                    }
+                    
                 },
                 error: function (error) {
                     // Handle the error response

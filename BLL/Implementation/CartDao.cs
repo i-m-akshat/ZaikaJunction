@@ -52,40 +52,31 @@ namespace BLL.Implementation
             }
 
         }
-        public async Task<bool> DeleteItems(int FoodID,int UserID)
+        public async Task<bool> DeleteItems(int foodId, int userId)
         {
             try
             {
-                await using(var _context= new Online_Food_ApplicationContext())
-                {
-                   TblCart tbl =   _context.TblCarts.Where(x=>x.FoodId==FoodID&&x.UserId==UserID).Select(x=>new TblCart
-                   {
-                       CartId = x.CartId,
-                       CartStatus = x.CartStatus,
-                       AddedDate = x.AddedDate,
-                       FoodId = x.FoodId,
-                       UserId = x.UserId,
-                       Quantity = x.Quantity,
-                       Food=x.Food
-                   }).FirstOrDefault();
-                   
-                    if (tbl != null)
-                    {
-                        _context.TblCarts.Remove(tbl);
-                        _context.Entry(tbl).State = EntityState.Deleted;
-                        _context.SaveChanges();
-                        return true;
+                await using var _context = new Online_Food_ApplicationContext();
 
-                    }
-                    else
-                        return false;
-                }
+                var itemToDelete = await _context.TblCarts
+                    .FirstOrDefaultAsync(x => x.FoodId == foodId && x.UserId == userId);
+
+                if (itemToDelete == null)
+                    return false;
+
+                _context.TblCarts.Remove(itemToDelete);
+                await _context.SaveChangesAsync();
+
+                return true;
             }
             catch (Exception ex)
             {
-                throw;
+                // Optional: Log the exception
+                throw new Exception("An error occurred while deleting the item.", ex);
             }
         }
+
+
         public async Task<bool> CheckIfExist(int FoodID,int UserID)
         {
             await using (var _context= new Online_Food_ApplicationContext())

@@ -2,10 +2,9 @@
 using Models;
 using OnlineFastFoodDelivery.Models;
 using System.Diagnostics;
-using BLL.Interfaces;
-using BLL.Implementation;
 using Models.ViewModel;
-using System.Collections.Generic;
+using MediatR;
+using Mediator.Query.Home;
 
 
 namespace OnlineFastFoodDelivery.Controllers
@@ -13,43 +12,23 @@ namespace OnlineFastFoodDelivery.Controllers
 
     public class HomeController : Controller
     {
-        HomePageDAO DAL = new HomePageDao();
-        UserLogin userDAL = new UserLoginDao();
+
+        private readonly IMediator _mediator;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger,IMediator _mediator)
         {
             _logger = logger;
+            this._mediator= _mediator;
         }
         [Route("")]
         public async Task<IActionResult> Index()
         {
             int? UserID = 0;
             UserID = HttpContext.Session.GetInt32("UserID");
-            List<Category> categories = new List<Category>();
-            List<Category> topcategories = new List<Category>();
-            List<SubCategory> subCategories = new List<SubCategory>();
-            List<Food> foods = new List<Food>();
-            List<Food> topFoods = new List<Food>();
-            List<FoodType> foodTypes = new List<FoodType>();
-            categories = await DAL.GetAllCategories();
-            topcategories = await DAL.GetCategoriesForHomepage();
-            foodTypes = await DAL.GetAllFoodTypesForHomepage();
-            subCategories = await DAL.GetSubCategoriesForHomePage();
-            topFoods = await DAL.GetFoodsForHomepage_TopRated();
-            foods = await DAL.GetFoodsForHomepage();
-            var _viewModel = new HomePageViewModel()
-            {
-                Categories = categories,
-                TopCategories = topcategories,
-                SubCategories = subCategories,
-                Food = foods,
-                FoodTypes = foodTypes,
-                TopFoods = topFoods
-            };
 
-
-
+            HomePageViewModel _viewModel=new HomePageViewModel();
+            _viewModel = await _mediator.Send(new GetContentForHomepage());
 
             return View(_viewModel);
         }
@@ -58,41 +37,7 @@ namespace OnlineFastFoodDelivery.Controllers
         {
 
             HomePageViewModel _viewModel = new HomePageViewModel();
-            List<Category> categories = new List<Category>();
-            List<Category> topcategories = new List<Category>();
-            List<SubCategory> subCategories = new List<SubCategory>();
-            List<Food> foods = new List<Food>();
-            List<FoodType> foodTypes = new List<FoodType>();
-            if (FoodTypeID != null)
-            {
-                foods = await DAL.getFoodsByFoodTypoeID((int)FoodTypeID);
-            }
-            else if (CatID != null)
-            {
-                foods = await DAL.getFoodsByCategoryID((int)CatID);
-            }
-            else if (SubCatID != null)
-            {
-                foods = await DAL.getFoodsBySubCategoryID((int)SubCatID);
-            }
-            else
-            {
-                foods = await DAL.GetAllFoods();
-            }
-            categories = await DAL.GetAllCategories();
-            subCategories = await DAL.GetAllSubCategories(subCategories);
-            topcategories = await DAL.GetCategoriesForHomepage();
-            foodTypes = await DAL.GetAllFoodTypes();
-            //foods = await DAL.GetAllFoods();
-
-            _viewModel = new HomePageViewModel()
-            {
-                Categories = categories,
-                TopCategories = topcategories,
-                SubCategories = subCategories,
-                Food = foods,
-                FoodTypes = foodTypes
-            };
+            _viewModel = await _mediator.Send(new GetFoods_Query(FoodTypeID, CatID, SubCatID));
             return View(_viewModel);
 
         }
@@ -100,17 +45,14 @@ namespace OnlineFastFoodDelivery.Controllers
         {
 
             List<Food> listFood = new List<Food>();
-            HomePageViewModel _viewModel = new HomePageViewModel();
-            listFood = await DAL.GetAllFoods_Filter(listCat, listSubCat, listFoodType);
+            listFood = await _mediator.Send(new FilterFoods_Query(listCat, listSubCat, listFoodType));
             return PartialView("_Food", listFood);
-
-
         }
 
         public async Task<IActionResult> FoodDetails(int FoodID)
         {
             Food model = new Food();
-            model = await DAL.GetFoodByID(FoodID);
+            model=await _mediator.Send(new FoodDetails_Query(FoodID));
             return View(model);
         }
 
@@ -118,21 +60,7 @@ namespace OnlineFastFoodDelivery.Controllers
         {
             try
             {
-                User user = await DAL.GetUserDetails(id);
-
-                List<Order> listOrders = await userDAL.GetAllOrders((int)id);
-                List<OrderDetail> listOrderDetails = new List<OrderDetail>();
-                //foreach (Order order in listOrders) 
-                //{
-                listOrderDetails = await userDAL.GetAllOrderDetails((int)id);
-                //}
-                User_ViewModel viewModel = new User_ViewModel()
-                {
-                    _user = user,
-                    Orders = listOrders,
-                    OrderDetails = listOrderDetails
-                };
-
+                User_ViewModel viewModel = await _mediator.Send(new UserProfile_Query(id));
                 return View(viewModel);
             }
             catch (Exception)
@@ -149,8 +77,7 @@ namespace OnlineFastFoodDelivery.Controllers
         public async Task<List<SubCategory>> getSubCategoryBasedOnCat(List<int> list)
         {
 
-            List<SubCategory> listSub = await DAL.GetSubCategoriesForHomePage(list);
-
+            List<SubCategory> listSub=await _mediator.Send(new GetSubCatBasedOnCat_Query(list));
             return listSub;
         }
 
@@ -175,12 +102,12 @@ namespace OnlineFastFoodDelivery.Controllers
         }
         public async Task<List<String>> getAllFoodsName()
         {
-            List<string> listFoodNames = await DAL.getAllFoodNames();
+            List<string> listFoodNames = await _mediator.Send(new GetAllFoodNames_Query());
             return listFoodNames;
         }
         public async Task<long> getFoodIDbyName(string FoodName)
         {
-            long FoodID = await DAL.getFoodByName(FoodName);
+            long FoodID = await _mediator.Send(new GetFoodIdByName_Query(FoodName));
             if (FoodID != 0)
             {
                 return FoodID;
