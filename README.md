@@ -1,5 +1,5 @@
 
-# 🍽️ Zaika Junction – AI-Powered Food Delivery Assistant
+# 🍽️ Zaika Junction –  Food Delivery Assistant
 
 **Zaika Junction** is a modern food delivery web application. Built with **ASP.NET Core MVC** , the app helps users interact conversationally while browsing menus, tracking orders, and getting support — all through a sleek and friendly UI.
 
